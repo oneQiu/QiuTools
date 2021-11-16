@@ -1,0 +1,44 @@
+.layout-warp {
+	background: white;
+	display: flex;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.layout-content {
+	flex: 1;
+	overflow: scroll;
+	margin-top: 80px;
+	background: #f5f9fc;
+	padding: 40px 50px;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.layout-header {
+	box-shadow: 0 2px 8px #f0f1f2;
+	background: white;
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	z-index: 2;
+	.right-warp {
+		display: flex;
+		align-items: center;
+		.message-warp {
+			display: flex;
+			align-items: center;
+			height: 40px;
+			width: 40px;
+			margin: 0 20px;
+			justify-content: center;
+		}
+	}
+}
+
+.progress {
+	position: fixed;
+	top: -10px;
+	z-index: 3;
+}
