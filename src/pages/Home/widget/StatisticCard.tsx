@@ -1,8 +1,7 @@
-import { Statistic, Row, Col, Card, Divider } from 'antd';
-import { LikeOutlined } from '@ant-design/icons';
-import {} from 'echarts/charts';
+import { Row, Col, Card, Divider } from 'antd';
 import ReactECharts from 'echarts-for-react';
 import styles from '../index.module.less';
+import { StatisticCard } from '@ant-design/pro-card';
 
 export default () => {
 	const dataBJ = [
@@ -204,6 +203,12 @@ export default () => {
 			},
 		],
 	};
+	const imgStyle = {
+		display: 'block',
+		width: 42,
+		height: 42,
+	};
+
 	return (
 		<Card className={styles['statistic-card-warp']}>
 			<Row justify="space-between">
@@ -211,19 +216,60 @@ export default () => {
 					<ReactECharts option={option} />
 				</Col>
 				<Col span={16}>
-					<Row justify="space-around">
-						<Col span={6}>
-							<Statistic title="点赞" value={1128} prefix={<LikeOutlined />} />
-						</Col>
-						<Divider type="vertical" style={{ height: 70 }} />
-						<Col span={6}>
-							<Statistic title="文章" value={93} suffix="篇" />
-						</Col>
-						<Divider type="vertical" style={{ height: 70 }} />
-						<Col span={6}>
-							<Statistic title="访问" value={545} suffix="次" />
-						</Col>
-					</Row>
+					<StatisticCard.Group direction="row">
+						<StatisticCard
+							statistic={{
+								title: '支付金额',
+								value: 2176,
+								icon: (
+									<img
+										style={imgStyle}
+										src="https://gw.alipayobjects.com/mdn/rms_7bc6d8/afts/img/A*dr_0RKvVzVwAAAAAAAAAAABkARQnAQ"
+										alt="icon"
+									/>
+								),
+							}}
+						/>
+						<StatisticCard
+							statistic={{
+								title: '访客数',
+								value: 475,
+								icon: (
+									<img
+										style={imgStyle}
+										src="https://gw.alipayobjects.com/mdn/rms_7bc6d8/afts/img/A*-jVKQJgA1UgAAAAAAAAAAABkARQnAQ"
+										alt="icon"
+									/>
+								),
+							}}
+						/>
+						<StatisticCard
+							statistic={{
+								title: '支付成功订单数',
+								value: 87,
+								icon: (
+									<img
+										style={imgStyle}
+										src="https://gw.alipayobjects.com/mdn/rms_7bc6d8/afts/img/A*FPlYQoTNlBEAAAAAAAAAAABkARQnAQ"
+										alt="icon"
+									/>
+								),
+							}}
+						/>
+						<StatisticCard
+							statistic={{
+								title: '浏览量',
+								value: 1754,
+								icon: (
+									<img
+										style={imgStyle}
+										src="https://gw.alipayobjects.com/mdn/rms_7bc6d8/afts/img/A*pUkAQpefcx8AAAAAAAAAAABkARQnAQ"
+										alt="icon"
+									/>
+								),
+							}}
+						/>
+					</StatisticCard.Group>
 					<Divider />
 					图表
 				</Col>

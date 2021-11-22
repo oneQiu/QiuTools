@@ -2,14 +2,17 @@ import AppCard from './widget/AppCard';
 import StatisticCard from './widget/StatisticCard';
 import styles from './index.module.less';
 import InfoCard from './widget/InfoCard';
+import ArticleCard from './widget/ArticleCard';
+import TotalCard from './widget/TotalCard';
 
 export default () => {
 	return (
 		<div className={styles['home-warp']}>
 			<div style={{ flex: 1 }}>
 				<StatisticCard />
-				<AppCard title="案例" type="demo" />
-				<AppCard title="文章" type="article" />
+				<TotalCard />
+				<AppCard />
+				<ArticleCard />
 			</div>
 			<InfoCard />
 		</div>

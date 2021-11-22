@@ -1,57 +1,55 @@
-import { Col, Row, Card } from 'antd';
-import { Fragment, useState } from 'react';
-import styles from '../index.module.less';
-import {
-	LikeOutlined,
-	EditOutlined,
-	EllipsisOutlined,
-} from '@ant-design/icons';
-import { Popover, Divider, Button } from 'antd';
+import { Progress, Tag } from 'antd';
+import ProList from '@ant-design/pro-list';
+import { Fragment } from 'react';
 
-interface AppCardProps {
-	title: string;
-	type: 'article' | 'demo';
-}
-const { Meta } = Card;
-
-export default ({ title, type }: AppCardProps) => {
-	const [appList, setAppList] = useState([1, 2, 3, 4]);
-
-	return (
-		<div className={styles['app-card-warp']}>
-			<div style={{ marginBottom: 20 }}>{title}</div>
-			<Row gutter={[32, 16]}>
-				{appList.map((i) => (
-					<Col key={i} span={6}>
-						<Card
-							cover={
-								<img
-									alt="example"
-									src="https://joeschmoe.io/api/v1/random"
-									height={100}
-								/>
-							}
-							actions={[
-								<LikeOutlined key="LikeOutlined" />,
-								<EditOutlined key="edit" />,
-								<Popover
-									content={
-										<Fragment>
-											<Button type="text">分享链接</Button>
-											<Divider style={{ margin: '12px 0' }} />
-											<Button type="text">删除</Button>
-										</Fragment>
-									}
-								>
-									<EllipsisOutlined key="ellipsis" />
-								</Popover>,
-							]}
-						>
-							<Meta title="Card title" description="This is the description" />
-						</Card>
-					</Col>
-				))}
-			</Row>
+const data = [
+	'语雀的天空',
+	'Ant Design',
+	'蚂蚁金服体验科技',
+	'TechUI',
+	'TechUI 2.0',
+	'Bigfish',
+].map((item) => ({
+	title: item,
+	subTitle: <Tag color="#5BD8A6">语雀专栏</Tag>,
+	actions: [<a key="run">查看</a>, <a key="delete">删除</a>],
+	avatar:
+		'https://gw.alipayobjects.com/zos/antfincdn/UCSiy1j6jx/xingzhuang.svg',
+	content: (
+		<div
+			style={{
+				flex: 1,
+			}}
+		>
+			<div
+				style={{
+					width: 200,
+				}}
+			>
+				<div>发布中</div>
+				<Progress percent={80} />
+			</div>
 		</div>
+	),
+}));
+
+export default () => {
+	return (
+		<Fragment>
+			<h2 style={{ margin: 20 }}>Demo</h2>
+			<ProList<any>
+				grid={{ gutter: 16, column: 2 }}
+				metas={{
+					title: {},
+					subTitle: {},
+					type: {},
+					avatar: {},
+					content: {},
+					actions: {},
+				}}
+				headerTitle="前端案例展示"
+				dataSource={data}
+			/>
+		</Fragment>
 	);
 };
