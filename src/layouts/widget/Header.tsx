@@ -11,10 +11,16 @@ import {
 import styles from '../index.module.less';
 import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/models';
+import { SET_LOADING } from '@/models/reducers/system/actions';
 
 const { Header } = Layout;
 
 export default () => {
+	const systemStore = useSelector((state: RootState) => state.system);
+	const dispatch = useDispatch();
+
 	return (
 		<Fragment>
 			<Progress
@@ -32,7 +38,16 @@ export default () => {
 					subTitle="This is Qite"
 					extra={
 						<div className={styles['right-warp']}>
-							<a href="#" className={styles['message-warp']}>
+							<a
+								href="#"
+								className={styles['message-warp']}
+								onClick={() => {
+									dispatch({
+										type: SET_LOADING,
+										data: !systemStore.loading,
+									});
+								}}
+							>
 								<Badge dot>
 									<MailOutlined style={{ fontSize: 18 }} />
 								</Badge>
@@ -54,7 +69,7 @@ export default () => {
 			</Header>
 			<Loading3QuartersOutlined
 				style={{
-					zIndex: 5,
+					zIndex: systemStore.loading ? 5 : -1,
 					position: 'fixed',
 					right: 25,
 					top: 27,
