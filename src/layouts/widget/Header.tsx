@@ -25,7 +25,7 @@ export default () => {
 		<Fragment>
 			<Progress
 				className={styles['progress']}
-				percent={50}
+				percent={0}
 				trailColor="white"
 				showInfo={false}
 				size="small"

@@ -13,7 +13,6 @@ const initState: IState = {
 export default (state = initState, payload: Payload): IState => {
 	switch (payload.type) {
 		case SET_LOADING:
-			state.loading = payload.data;
 			break;
 
 		default:
