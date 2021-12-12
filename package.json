@@ -32,6 +32,7 @@
   "devDependencies": {
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.0",
+    "@types/react-beautiful-dnd": "^13.1.2",
     "@types/react-dom": "^17.0.0",
     "@types/redux-logger": "^3.0.9",
     "@vitejs/plugin-react": "^1.0.0",

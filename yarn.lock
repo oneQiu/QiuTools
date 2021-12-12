@@ -154,7 +154,7 @@
   "resolved" "https://registry.npmmirror.com/@babel/compat-data/download/@babel/compat-data-7.16.0.tgz"
   "version" "7.16.0"
 
-"@babel/core@^7.15.5":
+"@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.15.5":
   "integrity" "sha1-xP9EBG9f4xBSXMnrTvUUfwxTdNQ="
   "resolved" "https://registry.npmmirror.com/@babel/core/download/@babel/core-7.16.0.tgz"
   "version" "7.16.0"
@@ -746,6 +746,13 @@
   "resolved" "https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz?cache=0&sync_timestamp=1629708737049&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.4.tgz"
   "version" "15.7.4"
 
+"@types/react-beautiful-dnd@^13.1.2":
+  "integrity" "sha1-UQQFq7CfSTr9/YmL+DmV3GOFwTA="
+  "resolved" "https://registry.npmmirror.com/@types/react-beautiful-dnd/download/@types/react-beautiful-dnd-13.1.2.tgz"
+  "version" "13.1.2"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@^17.0.0":
   "integrity" "sha1-4ercPF6GvbX3aE4AJ0riKOe8xGY="
   "resolved" "https://registry.npmmirror.com/@types/react-dom/download/@types/react-dom-17.0.11.tgz?cache=0&sync_timestamp=1635922942583&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Freact-dom%2Fdownload%2F%40types%2Freact-dom-17.0.11.tgz"
@@ -777,7 +784,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.0":
+"@types/react@*", "@types/react@^16.8.6 || ^17.0.0", "@types/react@^17.0.0":
   "integrity" "sha1-eXtm01m2kuPxmZG2sH5LDHBsAQI="
   "resolved" "https://registry.npmmirror.com/@types/react/download/@types/react-17.0.34.tgz"
   "version" "17.0.34"
@@ -889,7 +896,7 @@
 "ansistyles@*":
   "version" "0.1.3"
 
-"antd@^4.16.13":
+"antd@^4.16.13", "antd@4.x":
   "integrity" "sha1-6bm0pZDbKHR6rhyrmJgWSaNYgK8="
   "resolved" "https://registry.npmmirror.com/antd/download/antd-4.16.13.tgz"
   "version" "4.16.13"
@@ -1345,7 +1352,7 @@
     "fast-deep-equal" "^3.1.3"
     "size-sensor" "^1.0.1"
 
-"echarts@^5.2.2":
+"echarts@^3.0.0 || ^4.0.0 || ^5.0.0", "echarts@^5.2.2":
   "integrity" "sha1-7DyLKhUcu6cbo8LHz5svIEfOQ3A="
   "resolved" "https://registry.npmmirror.com/echarts/download/echarts-5.2.2.tgz"
   "version" "5.2.2"
@@ -1772,7 +1779,7 @@
   "resolved" "https://registry.npmmirror.com/just-diff/download/just-diff-3.1.1.tgz"
   "version" "3.1.1"
 
-"less@^4.1.2":
+"less@*", "less@^4.1.2":
   "integrity" "sha1-YJnuWEmZdQwmJLZfgBRfhnTktLA="
   "resolved" "https://registry.npmmirror.com/less/download/less-4.1.2.tgz?cache=0&sync_timestamp=1633303807622&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fless%2Fdownload%2Fless-4.1.2.tgz"
   "version" "4.1.2"
@@ -2837,7 +2844,7 @@
     "reactcss" "^1.2.0"
     "tinycolor2" "^1.4.1"
 
-"react-dom@^17.0.0":
+"react-dom@*", "react-dom@^16.3.0 || ^17.0.0", "react-dom@^16.8.5 || ^17.0.0", "react-dom@^17.0.0", "react-dom@^17.0.2", "react-dom@>= 16.8.0", "react-dom@>= 16.9.0", "react-dom@>=16.0.0", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.9.0":
   "integrity" "sha1-7P+2hF462Nv83EmPDQqTlzZQLCM="
   "resolved" "https://registry.npmmirror.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1636129057935&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -2861,7 +2868,7 @@
   "resolved" "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react-is@^17.0.2":
+"react-is@^17.0.2", "react-is@>= 16.8.0":
   "integrity" "sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA="
   "resolved" "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz"
   "version" "17.0.2"
@@ -2922,7 +2929,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^17.0.0":
+"react@*", "react@^15.0.0 || >=16.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^16.8.5 || ^17.0.0", "react@^17.0.0", "react@^17.0.2", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=16.0.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.9.0", "react@16.x", "react@17.0.2":
   "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
   "resolved" "https://registry.npmmirror.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1636129016591&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact%2Fdownload%2Freact-17.0.2.tgz"
   "version" "17.0.2"
@@ -2998,7 +3005,7 @@
   "resolved" "https://registry.npmmirror.com/redux-thunk/download/redux-thunk-2.4.0.tgz"
   "version" "2.4.0"
 
-"redux@^4.0.0", "redux@^4.0.4", "redux@^4.1.2":
+"redux@^4", "redux@^4.0.0", "redux@^4.0.4", "redux@^4.1.2":
   "integrity" "sha1-FA81Qm2Zu0cpr3YK/PeeqqxAcQQ="
   "resolved" "https://registry.npmmirror.com/redux/download/redux-4.1.2.tgz?cache=0&sync_timestamp=1635663041213&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fredux%2Fdownload%2Fredux-4.1.2.tgz"
   "version" "4.1.2"
@@ -3260,7 +3267,7 @@
   dependencies:
     "ansi-regex" "^5.0.1"
 
-"styled-components@^5.3.3":
+"styled-components@^5.0.0", "styled-components@^5.3.3", "styled-components@>= 2":
   "integrity" "sha1-MSo9mlSfRwjw+w7cgp6zS94DJ0M="
   "resolved" "https://registry.npmmirror.com/styled-components/download/styled-components-5.3.3.tgz"
   "version" "5.3.3"

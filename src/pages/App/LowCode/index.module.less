@@ -1,14 +1,45 @@
 .lowcode-warp {
 	display: flex;
+	align-items: flex-start;
+	overflow: hidden;
+	height: 100%;
 
 	.sidebar-warp {
-		width: 250px;
+		width: 300px;
+		padding: 20px;
+		background: white;
+
+		.item-warp {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			padding: 10px 0;
+			cursor: pointer;
+			transition: all 0.2s linear;
+			border-radius: 5px;
+			font-size: 12px;
+			user-select: none;
+			z-index: 2;
+
+			&:hover {
+				background: #e6f7ff;
+			}
+		}
 	}
 
 	.container-warp {
 		flex: 1;
+		margin: 0 20px;
+		background: white;
+		height: 100%;
 	}
+
 	.settingbar-warp {
-		width: 250px;
+		width: 300px;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 200px;
 	}
 }
