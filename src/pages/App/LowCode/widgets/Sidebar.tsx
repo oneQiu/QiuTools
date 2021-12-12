@@ -1,9 +1,8 @@
 import styles from '../index.module.less';
-import { CompCategory, CompItem } from '@/constant/sidebarComp';
+import { CompCategory, SidebarItem } from '@/constant/lowCode';
 import { Col, Collapse, Empty, Row } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
-import { Fragment } from 'react';
 
 const { Panel } = Collapse;
 const Iconfont = createFromIconfontCN({
@@ -11,16 +10,16 @@ const Iconfont = createFromIconfontCN({
 });
 
 export default () => {
-	const renderComps = (comps: CompItem[]) => {
+	const renderComps = (comps: SidebarItem[]) => {
 		return (
 			<Row>
 				{comps.map((i, index) => (
-					<Col span={8} key={i.compName}>
-						<Droppable droppableId={i.compName}>
-							{(provided) => (
+					<Col span={8} key={i.compTag}>
+						<Droppable droppableId={i.compTag} isDropDisabled>
+							{(provided, snapshot) => (
 								<div ref={provided.innerRef} {...provided.droppableProps}>
 									<Draggable
-										draggableId={i.compName}
+										draggableId={i.compTag}
 										shouldRespectForcePress
 										index={index}
 									>
@@ -36,11 +35,11 @@ export default () => {
 													type={i.icon || 'icon-zujian'}
 													style={{ fontSize: 28 }}
 												/>
-												<span>{i.label}</span>
+												<span>{i.name}</span>
 											</div>
 										)}
 									</Draggable>
-									{provided.placeholder}
+									{snapshot.isUsingPlaceholder && provided.placeholder}
 								</div>
 							)}
 						</Droppable>
@@ -58,7 +57,7 @@ export default () => {
 				expandIconPosition="right"
 			>
 				{CompCategory.map((i) => (
-					<Panel key={i.type} header={i.label}>
+					<Panel key={i.type} header={i.name}>
 						{i.components.length === 0 ? (
 							<Empty
 								image={Empty.PRESENTED_IMAGE_SIMPLE}

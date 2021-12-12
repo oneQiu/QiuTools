@@ -11,15 +11,14 @@ import {
 import styles from '../index.module.less';
 import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/models';
-import { SET_LOADING } from '@/models/reducers/system/actions';
+import { useAppDispatch, useAppSelector } from '@/store';
+import { systemActions } from '@/store/features/system';
 
 const { Header } = Layout;
 
 export default () => {
-	const systemStore = useSelector((state: RootState) => state.system);
-	const dispatch = useDispatch();
+	const systemStore = useAppSelector((state) => state.system);
+	const dispatch = useAppDispatch();
 
 	return (
 		<Fragment>
@@ -42,10 +41,7 @@ export default () => {
 								href="#"
 								className={styles['message-warp']}
 								onClick={() => {
-									dispatch({
-										type: SET_LOADING,
-										data: !systemStore.loading,
-									});
+									dispatch(systemActions.setLoading());
 								}}
 							>
 								<Badge dot>

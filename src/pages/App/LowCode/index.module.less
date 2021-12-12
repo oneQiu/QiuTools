@@ -32,6 +32,26 @@
 		margin: 0 20px;
 		background: white;
 		height: 100%;
+		.item {
+			position: relative;
+			border: 1px dashed black;
+			background: white;
+			min-height: 40px;
+
+			.tagname {
+				color: grey;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 12px;
+			}
+			.delete-button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 5;
+			}
+		}
 	}
 
 	.settingbar-warp {

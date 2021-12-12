@@ -715,6 +715,16 @@
   "resolved" "https://registry.npmmirror.com/@popperjs/core/download/@popperjs/core-2.10.2.tgz?cache=0&sync_timestamp=1633001441229&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40popperjs%2Fcore%2Fdownload%2F%40popperjs%2Fcore-2.10.2.tgz"
   "version" "2.10.2"
 
+"@reduxjs/toolkit@^1.7.0":
+  "integrity" "sha512-iApo4zS+8kWnIn4xucTDWpqRjDNkXruFIyJQWwThIEIbMj5kwqvbMaQcEgd2a305B68Z+4bvZqAqJSATeddaJA=="
+  "resolved" "https://registry.npmmirror.com/@reduxjs/toolkit/download/@reduxjs/toolkit-1.7.0.tgz"
+  "version" "1.7.0"
+  dependencies:
+    "immer" "^9.0.7"
+    "redux" "^4.1.2"
+    "redux-thunk" "^2.4.1"
+    "reselect" "^4.1.5"
+
 "@rollup/pluginutils@^4.1.1":
   "integrity" "sha1-HU2obdTt7RVlalfZM/2iuaCNR+w="
   "resolved" "https://registry.nlark.com/@rollup/pluginutils/download/@rollup/pluginutils-4.1.1.tgz"
@@ -804,6 +814,11 @@
   "integrity" "sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk="
   "resolved" "https://registry.nlark.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz?cache=0&sync_timestamp=1629709152024&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fscheduler%2Fdownload%2F%40types%2Fscheduler-0.16.2.tgz"
   "version" "0.16.2"
+
+"@types/shortid@^0.0.29":
+  "integrity" "sha1-gJPuBBam4r8qpjOBCRFLP7/6Dps="
+  "resolved" "https://registry.npmmirror.com/@types/shortid/download/@types/shortid-0.0.29.tgz"
+  "version" "0.0.29"
 
 "@umijs/use-params@^1.0.9":
   "integrity" "sha512-QlN0RJSBVQBwLRNxbxjQ5qzqYIGn+K7USppMoIOVlf7fxXHsnQZ2bEsa6Pm74bt6DVQxpUE8HqvdStn6Y9FV1w=="
@@ -1619,6 +1634,11 @@
   "resolved" "https://registry.npm.taobao.org/image-size/download/image-size-0.5.5.tgz?cache=0&sync_timestamp=1618424661730&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimage-size%2Fdownload%2Fimage-size-0.5.5.tgz"
   "version" "0.5.5"
 
+"immer@^9.0.7":
+  "integrity" "sha512-KGllzpbamZDvOIxnmJ0jI840g7Oikx58lBPWV0hUh7dtAyZpFqqrBZdKka5GlTwMTZ1Tjc/bKKW4VSFAt6BqMA=="
+  "resolved" "https://registry.npmmirror.com/immer/download/immer-9.0.7.tgz"
+  "version" "9.0.7"
+
 "imurmurhash@^0.1.4":
   "integrity" "sha1-khi5srkoojixPcT7a21XbyMUU+o="
   "resolved" "https://registry.nlark.com/imurmurhash/download/imurmurhash-0.1.4.tgz"
@@ -2065,6 +2085,11 @@
   "integrity" "sha1-FjDEKyJR/4HiooPelqVJfqkuXg0="
   "resolved" "https://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.8.tgz"
   "version" "0.0.8"
+
+"nanoid@^2.1.0":
+  "integrity" "sha1-7CS4p1jVkVYVMbQXagHjq08PAoA="
+  "resolved" "https://registry.npmmirror.com/nanoid/download/nanoid-2.1.11.tgz"
+  "version" "2.1.11"
 
 "nanoid@^3.1.30":
   "integrity" "sha1-Y/k8xUjSoRPcXfvGO/oJ4rm2Q2I="
@@ -2878,7 +2903,7 @@
   "resolved" "https://registry.npmmirror.com/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
-"react-redux@^7.2.0", "react-redux@^7.2.6":
+"react-redux@^7.2.0", "react-redux@^7.2.1 || ^8.0.0-beta", "react-redux@^7.2.6":
   "integrity" "sha1-SWM6JP5VK1+cr1j+uKE4k23f6ao="
   "resolved" "https://registry.npmmirror.com/react-redux/download/react-redux-7.2.6.tgz"
   "version" "7.2.6"
@@ -2929,7 +2954,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^15.0.0 || >=16.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^16.8.5 || ^17.0.0", "react@^17.0.0", "react@^17.0.2", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=16.0.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.9.0", "react@16.x", "react@17.0.2":
+"react@*", "react@^15.0.0 || >=16.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^16.8.5 || ^17.0.0", "react@^16.9.0 || ^17.0.0 || 18.0.0-beta", "react@^17.0.0", "react@^17.0.2", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=16.0.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.9.0", "react@16.x", "react@17.0.2":
   "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
   "resolved" "https://registry.npmmirror.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1636129016591&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact%2Fdownload%2Freact-17.0.2.tgz"
   "version" "17.0.2"
@@ -3000,10 +3025,10 @@
   dependencies:
     "deep-diff" "^0.3.5"
 
-"redux-thunk@^2.4.0":
-  "integrity" "sha1-rInh1rm9ue5JzmmmkHG+QbvYLWc="
-  "resolved" "https://registry.npmmirror.com/redux-thunk/download/redux-thunk-2.4.0.tgz"
-  "version" "2.4.0"
+"redux-thunk@^2.4.0", "redux-thunk@^2.4.1":
+  "integrity" "sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q=="
+  "resolved" "https://registry.npmmirror.com/redux-thunk/download/redux-thunk-2.4.1.tgz"
+  "version" "2.4.1"
 
 "redux@^4", "redux@^4.0.0", "redux@^4.0.4", "redux@^4.1.2":
   "integrity" "sha1-FA81Qm2Zu0cpr3YK/PeeqqxAcQQ="
@@ -3016,6 +3041,11 @@
   "integrity" "sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I="
   "resolved" "https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz?cache=0&sync_timestamp=1626993001371&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.13.9.tgz"
   "version" "0.13.9"
+
+"reselect@^4.1.5":
+  "integrity" "sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ=="
+  "resolved" "https://registry.npmmirror.com/reselect/download/reselect-4.1.5.tgz"
+  "version" "4.1.5"
 
 "resize-observer-polyfill@^1.5.0", "resize-observer-polyfill@^1.5.1":
   "integrity" "sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ="
@@ -3115,6 +3145,13 @@
   "integrity" "sha1-GI1SHelbkIdAT9TctosT3wrk5/g="
   "resolved" "https://registry.npm.taobao.org/shallowequal/download/shallowequal-1.1.0.tgz"
   "version" "1.1.0"
+
+"shortid@^2.2.16":
+  "integrity" "sha1-t0K48MuWQG/Tkcdr/Bimelf+Vgg="
+  "resolved" "https://registry.npm.taobao.org/shortid/download/shortid-2.2.16.tgz"
+  "version" "2.2.16"
+  dependencies:
+    "nanoid" "^2.1.0"
 
 "signal-exit@^3.0.0", "signal-exit@^3.0.2":
   "version" "3.0.3"

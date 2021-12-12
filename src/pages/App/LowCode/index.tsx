@@ -7,10 +7,34 @@ import {
 	DropResult,
 	ResponderProvided,
 } from 'react-beautiful-dnd';
+import { CONTAINER } from '@/constant/lowCode';
+import { RootActions, useAppDispatch } from '@/store';
+import { CompTag } from 'LowCode';
 
 export default () => {
+	const dispatch = useAppDispatch();
 	const onDragEnd = (result: DropResult, provided: ResponderProvided) => {
-		console.log('end', result, provided);
+		const {
+			destination,
+			source: { droppableId, index },
+		} = result;
+		if (destination?.droppableId === CONTAINER) {
+			// 移动
+			if (droppableId === CONTAINER) {
+				dispatch(
+					RootActions.lowCode.moveComp({
+						sourceIndex: index,
+						destinationIndex: destination.index,
+						moveId: destination.droppableId,
+					})
+				);
+			} else {
+				// 新增
+				dispatch(
+					RootActions.lowCode.addComp(result.source.droppableId as CompTag)
+				);
+			}
+		}
 	};
 
 	return (
