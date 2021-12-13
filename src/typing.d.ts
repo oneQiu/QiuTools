@@ -3,4 +3,5 @@ declare interface RouteProps {
 	component?: JSX.Element;
 	children?: RouteProps[];
 	exact?: boolean;
+	title?: string;
 }

@@ -3,16 +3,30 @@ import ProList from '@ant-design/pro-list';
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+interface AppDataItem {
+	title: string;
+	appId: string;
+	type: 'React' | 'Vue' | 'JavaScript';
+}
+
 export default () => {
 	const navigate = useNavigate();
-	const data = ['可视化搭建平台'].map((item) => ({
-		title: item,
-		subTitle: <Tag color="#5BD8A6">React 专栏</Tag>,
+	const appData: AppDataItem[] = [
+		{
+			title: '可视化搭建平台',
+			appId: 'lowCode',
+			type: 'React',
+		},
+		{ title: '代码转换Json', appId: 'codeToJson', type: 'JavaScript' },
+	];
+	const data = appData.map(({ title, appId, type }) => ({
+		title,
+		subTitle: <Tag color="#5BD8A6">{type} 专栏</Tag>,
 		actions: [
 			<a
 				key="run"
 				onClick={() => {
-					navigate('/app/lowCode');
+					navigate(`/app/${appId}`);
 				}}
 			>
 				查看

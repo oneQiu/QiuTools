@@ -360,6 +360,14 @@
     "@babel/plugin-syntax-jsx" "^7.16.0"
     "@babel/types" "^7.16.0"
 
+"@babel/runtime-corejs3@^7.11.2":
+  "integrity" "sha512-IAdDC7T0+wEB4y2gbIL0uOXEYpiZEeuFUTVbdGq+UwCcF35T/tS8KrmMomEwEc5wBbyfH3PJVpTSUqrhPDXFcQ=="
+  "resolved" "https://registry.npmmirror.com/@babel/runtime-corejs3/download/@babel/runtime-corejs3-7.16.3.tgz"
+  "version" "7.16.3"
+  dependencies:
+    "core-js-pure" "^3.19.0"
+    "regenerator-runtime" "^0.13.4"
+
 "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   "integrity" "sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ=="
   "resolved" "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.3.tgz?cache=0&sync_timestamp=1636495247319&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.16.3.tgz"
@@ -1249,6 +1257,11 @@
   dependencies:
     "toggle-selection" "^1.0.6"
 
+"core-js-pure@^3.19.0":
+  "integrity" "sha512-N3JruInmCyt7EJj5mAq3csCgGYgiSqu7p7TQp2KOztr180/OAIxyIvL1FCjzgmQk/t3Yniua50Fsak7FShI9lA=="
+  "resolved" "https://registry.npmmirror.com/core-js-pure/download/core-js-pure-3.19.3.tgz"
+  "version" "3.19.3"
+
 "css-box-model@^1.2.0":
   "integrity" "sha1-WZUdO4H9ayB0pi1JREQVsNK018E="
   "resolved" "https://registry.nlark.com/css-box-model/download/css-box-model-1.2.1.tgz"
@@ -1557,6 +1570,11 @@
   "version" "1.0.3"
   dependencies:
     "function-bind" "^1.1.1"
+
+"highlight.js@^11.3.1":
+  "integrity" "sha1-gTB47zqlGcYXAPhP6QRyMcXcMpE="
+  "resolved" "https://registry.npmmirror.com/highlight.js/download/highlight.js-11.3.1.tgz"
+  "version" "11.3.1"
 
 "history@^5.1.0":
   "integrity" "sha1-LpPAnAZBlNONUu1ir9CvydmwHs4="
@@ -3395,7 +3413,7 @@
   "resolved" "https://registry.npm.taobao.org/treeverse/download/treeverse-1.0.4.tgz"
   "version" "1.0.4"
 
-"tslib@^2.3.0":
+"tslib@^2.1.0", "tslib@^2.3.0":
   "integrity" "sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE="
   "resolved" "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz"
   "version" "2.3.1"
@@ -3492,6 +3510,15 @@
   "integrity" "sha1-1HReiT3V/Q27WN0KTGoz2cn+xT4="
   "resolved" "https://registry.npm.taobao.org/walk-up-path/download/walk-up-path-1.0.0.tgz"
   "version" "1.0.0"
+
+"wangeditor@^4.7.10":
+  "integrity" "sha512-cUlPuPMaie0b4YqrA5VOu7myRiIn5+xp2aspS/PQLgmGuPum5Y037czT6HyOnDaSZ9U6wXsKh7nNYEnVsJAPhg=="
+  "resolved" "https://registry.npmmirror.com/wangeditor/download/wangeditor-4.7.10.tgz"
+  "version" "4.7.10"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@babel/runtime-corejs3" "^7.11.2"
+    "tslib" "^2.1.0"
 
 "warning@^4.0.1":
   "integrity" "sha1-Fungd+uKhtavfWSqHgX9hbRnjKM="
