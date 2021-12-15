@@ -1,0 +1,11 @@
+.mine-editor-warp {
+  border: 1px solid #ccc;
+}
+
+.mine-editor-warp .w-e-select-list{
+  width: 130px;
+}
+
+.mine-editor-warp .w-e-select-list::-webkit-scrollbar {
+  display: none;
+}
