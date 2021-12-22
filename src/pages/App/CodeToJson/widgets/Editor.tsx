@@ -21,7 +21,7 @@ export interface EditorRef {
 	/** 获取富文本值 */
 	getValue: () => void;
 	/** Editor实例 */
-	editor: IDomEditor;
+	editor: IDomEditor | null;
 }
 
 export default forwardRef<EditorRef>((props, ref) => {
@@ -47,8 +47,8 @@ export default forwardRef<EditorRef>((props, ref) => {
 
 	useImperativeHandle(ref, () => ({
 		setValue: setEditor,
-		getValue:  editor?.getText || (() =>{}),
-		editor:,
+		getValue: editor?.getText || (() => {}),
+		editor,
 	}));
 
 	useEffect(() => {

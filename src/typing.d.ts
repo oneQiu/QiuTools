@@ -5,3 +5,5 @@ declare interface RouteProps {
 	exact?: boolean;
 	title?: string;
 }
+
+declare module '*.md' {}

@@ -2,7 +2,12 @@ import React, { Fragment } from 'react';
 import { Button, Tag } from 'antd';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import ProList from '@ant-design/pro-list';
+import useHistory from '@/hooks/useHistory';
 
+interface DataItem {
+	title: string;
+	id: number | string;
+}
 const IconText = ({ icon, text }: { icon: any; text: string }) => (
 	<span>
 		{React.createElement(icon, { style: { marginRight: 8 } })}
@@ -10,26 +15,31 @@ const IconText = ({ icon, text }: { icon: any; text: string }) => (
 	</span>
 );
 
-const dataSource = [
+const dataSource: DataItem[] = [
 	{
 		title: '语雀的天空',
+		id: 1,
 	},
 	{
 		title: 'Ant Design',
+		id: 2,
 	},
 	{
 		title: '蚂蚁金服体验科技',
+		id: 3,
 	},
 	{
 		title: 'TechUI',
+		id: 4,
 	},
 ];
 
 export default () => {
+	const history = useHistory();
 	return (
 		<Fragment>
 			<h2 style={{ margin: 20 }}>Article</h2>
-			<ProList<{ title: string }>
+			<ProList<DataItem>
 				toolBarRender={() => {
 					return [
 						<Button key="3" type="primary">
@@ -40,6 +50,11 @@ export default () => {
 				itemLayout="vertical"
 				rowKey="id"
 				headerTitle="竖排样式"
+				onRow={(record) => ({
+					onClick: (event) => {
+						history.push(`/blog/${record.id}`);
+					},
+				})}
 				dataSource={dataSource}
 				metas={{
 					title: {},

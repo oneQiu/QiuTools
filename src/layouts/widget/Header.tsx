@@ -13,12 +13,14 @@ import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { systemActions } from '@/store/features/system';
+import { useNavigate } from 'react-router-dom';
 
 const { Header } = Layout;
 
 export default () => {
 	const systemStore = useAppSelector((state) => state.system);
 	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 
 	return (
 		<Fragment>
@@ -33,7 +35,11 @@ export default () => {
 			/>
 			<Header className={styles['layout-header']}>
 				<PageHeader
-					title="Qite"
+					title={
+						<div style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+							Qite
+						</div>
+					}
 					subTitle="This is Qite"
 					extra={
 						<div className={styles['right-warp']}>

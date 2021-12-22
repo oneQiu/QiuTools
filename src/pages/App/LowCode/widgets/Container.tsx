@@ -5,6 +5,7 @@ import { CompItem } from 'LowCode';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import { DeleteTwoTone } from '@ant-design/icons';
 import styles from '../index.module.less';
+import ItemRender from './ItemRender';
 
 export default () => {
 	const { build } = useAppSelector((store) => store.lowCode);
@@ -18,7 +19,7 @@ export default () => {
 					{...provided.dragHandleProps}
 					{...provided.draggableProps}
 				>
-					{`${i.compTag}: ${i.id}`}
+					<ItemRender {...i} />
 					<span className={styles['tagname']}>{i.name}</span>
 					<Button
 						icon={<DeleteTwoTone />}
