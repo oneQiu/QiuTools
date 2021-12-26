@@ -10,6 +10,7 @@ import DirectoryColumn from './widget/DirectoryColumn';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import { Divider } from 'antd';
+import CommentArea from './widget/CommentArea';
 
 export default () => {
 	return (
@@ -43,7 +44,7 @@ export default () => {
 						}}
 					/>
 				</div>
-				<div className="comment-area">评论区</div>
+				<CommentArea />
 			</div>
 
 			<div className="sidebar">

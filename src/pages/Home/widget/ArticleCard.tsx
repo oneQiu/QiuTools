@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Button, Tag } from 'antd';
+import { Button, Radio, Tag } from 'antd';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import ProList from '@ant-design/pro-list';
 import useHistory from '@/hooks/useHistory';
@@ -24,32 +24,35 @@ const dataSource: DataItem[] = [
 		title: 'Ant Design',
 		id: 2,
 	},
-	{
-		title: '蚂蚁金服体验科技',
-		id: 3,
-	},
-	{
-		title: 'TechUI',
-		id: 4,
-	},
 ];
 
 export default () => {
 	const history = useHistory();
 	return (
 		<Fragment>
-			<h2 style={{ margin: 20 }}>Article</h2>
+			<h2 style={{ margin: 20 }}>推荐</h2>
 			<ProList<DataItem>
 				toolBarRender={() => {
 					return [
 						<Button key="3" type="primary">
-							新建
+							创建
 						</Button>,
 					];
 				}}
 				itemLayout="vertical"
 				rowKey="id"
-				headerTitle="竖排样式"
+				headerTitle={
+					<Radio.Group buttonStyle="solid" defaultValue="large">
+						<Radio.Button value="large">Large</Radio.Button>
+						<Radio.Button value="default">Default</Radio.Button>
+						<Radio.Button value="small">Small</Radio.Button>
+					</Radio.Group>
+				}
+				footer={
+					<div style={{ float: 'right' }}>
+						<Button type="link">查看更多</Button>
+					</div>
+				}
 				onRow={(record) => ({
 					onClick: (event) => {
 						history.push(`/blog/${record.id}`);
