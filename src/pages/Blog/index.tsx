@@ -1,24 +1,55 @@
 import ReactMarkdown from 'react-markdown';
 import md from './demo.md?raw';
+import { Prism as SyntaxHignlignter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import remarkGfm from 'remark-gfm';
 import './index.less';
+import Author from './widget/Author';
+import Tags from './widget/Tags';
+import DirectoryColumn from './widget/DirectoryColumn';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import { Divider } from 'antd';
 
 export default () => {
-	console.log(md);
 	return (
 		<div className="blog-warp">
 			<div className="container-warp">
 				<div className="container">
 					<h1 className="title">标题</h1>
 					<div style={{ margin: '40px 0' }}>用户信息</div>
-					<ReactMarkdown children={md} />
+					<Divider />
+					<ReactMarkdown
+						children={md}
+						plugins={[remarkGfm]}
+						rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
+						skipHtml
+						components={{
+							code: ({ inline, node, className, children, ...props }) => {
+								const match = /language-(\w+)/.exec(className || '');
+								return !inline && match ? (
+									<SyntaxHignlignter
+										children={String(children).replace(/\n$/, '')}
+										language={match[1]}
+										style={atomDark}
+										{...(props as any)}
+									/>
+								) : (
+									<code className={className} {...props}>
+										{children}
+									</code>
+								);
+							},
+						}}
+					/>
 				</div>
 				<div className="comment-area">评论区</div>
 			</div>
 
 			<div className="sidebar">
-				<div>作者</div>
-				<div>文章标签</div>
-				<div className="directory-column">目录</div>
+				<Author />
+				<Tags />
+				<DirectoryColumn md={md} />
 			</div>
 		</div>
 	);

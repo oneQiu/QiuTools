@@ -5,26 +5,72 @@
 	.sidebar {
 		width: 300px;
 		border-radius: 5px;
-		div {
-			background: white;
-			padding: 20px 0;
-			margin-bottom: 20px;
-			box-shadow: 0 2px 8px #f0f1f2;
-		}
 		.directory-column {
 			position: sticky;
 			position: -webkit-sticky;
-			top: 100px;
+			top: -30px;
+			background: white;
+			padding: 20px;
+			box-shadow: 0 2px 8px #f0f1f2;
+			.anchor-warp {
+				max-height: 400px !important;
+				overflow-y: auto;
+				&::-webkit-scrollbar {
+					background-color: #e4e6eb;
+					outline: none;
+					border-radius: 2px;
+					width: 6px;
+				}
+				.menu-h2 {
+					padding-left: 16px;
+				}
+				.menu-h3 {
+					padding-left: 32px;
+				}
+				.menu-h4 {
+					padding-left: 48px;
+				}
+				.menu-h5 {
+					padding-left: 60px;
+				}
+				.menu-h6 {
+					padding-left: 72px;
+				}
+			}
+		}
+		// 标签
+		.tags-warp {
+			background: white;
+			padding: 20px;
+			margin: 20px 0;
+			box-shadow: 0 2px 8px #f0f1f2;
+		}
+		// 作者栏目
+		.author-warp {
+			padding: 20px;
+			background: white;
+			box-shadow: 0 2px 8px #f0f1f2;
+			.author-info {
+				display: flex;
+				align-items: center;
+				.username {
+					font-size: 18px;
+				}
+			}
+			.achievement {
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 	.container-warp {
-		max-width: 820px;
-		min-width: 600px;
+		max-width: 900px;
+		min-width: 820px;
+		margin-right: 40px;
 		.container {
 			flex: 1;
 			box-shadow: 0 2px 8px #f0f1f2;
 			border-radius: 5px;
-			margin-right: 40px;
 			background: white;
 			padding: 32px;
 
@@ -37,6 +83,8 @@
 		.comment-area {
 			box-shadow: 0 2px 8px #f0f1f2;
 			background: white;
+			margin: 20px 0;
+			padding: 32px;
 		}
 	}
 }
