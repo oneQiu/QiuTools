@@ -4,24 +4,27 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	css: {
-		preprocessorOptions: {
-			less: {
-				javascriptEnabled: true,
-			},
-		},
-	},
-	resolve: {
-		alias: [
-			{
-				find: '@',
-				replacement: path.resolve(__dirname, 'src'),
-			},
-			{
-				find: /^~/,
-				replacement: '',
-			},
-		],
-	},
+  server: {
+    hmr: true
+  },
+  plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true
+      }
+    }
+  },
+  resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      },
+      {
+        find: /^~/,
+        replacement: ''
+      }
+    ]
+  }
 });

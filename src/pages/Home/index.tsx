@@ -6,15 +6,15 @@ import ArticleCard from './widget/ArticleCard';
 import TotalCard from './widget/TotalCard';
 
 export default () => {
-	return (
-		<div className={styles['home-warp']}>
-			<div style={{ flex: 1 }}>
-				<StatisticCard />
-				<TotalCard />
-				<AppCard />
-				<ArticleCard />
-			</div>
-			<InfoCard />
-		</div>
-	);
+  return (
+    <div className={styles['home-warp']}>
+      <div style={{ flex: 1 }}>
+        <StatisticCard />
+        <TotalCard />
+        <AppCard />
+        <ArticleCard />
+      </div>
+      <InfoCard />
+    </div>
+  );
 };
