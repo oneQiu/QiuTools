@@ -1,9 +1,45 @@
 .pro-drawer-wrap {
   //position: relative;
   .tab-wrap {
+    border-right: 1px solid #f0f0f0;
+    box-shadow: -10px 0 16px rgb(0 0 0 / 8%);
     position: fixed;
-    top: 55px;
+    top: 0;
     background: white;
     padding: 10px 5px;
+    text-align: center;
+
+    .ant-menu-item-selected,
+    .ant-menu-item:active,
+    .ant-menu-submenu-title:active {
+      background: white;
+    }
+
+    .ant-menu-item {
+      text-align: center;
+    }
+
+    .tab-close {
+      &:hover {
+        color: var(--ant-primary-color);
+      }
+    }
+  }
+}
+
+.operation-area {
+  .color-6e {
+    color: #6e6e6e;
+  }
+}
+
+.drop-down {
+  .drop-down-menu-item {
+    padding: 8px 10px;
+    color: #6e6e6e;
+    min-width: 200px;
+    &:hover {
+      color: black;
+    }
   }
 }
