@@ -19,7 +19,7 @@ export default ({
   activeKey,
   hideReload,
   operations,
-  moreCount,
+  moreCount
 }: IProps) => {
   const [fakerLoading, setFakerLoading] = useState<boolean>(false);
 
@@ -49,13 +49,12 @@ export default ({
           type={'text'}
         />
       )}
-      {operations.slice(0, moreCount).map((i) => (
+      {operations.slice(0, moreCount).map(i => (
         <Button
           className={'color-6e'}
           onClick={i.onClick}
           key={i.key}
-          type={'text'}
-        >
+          type={'text'}>
           {i.text}
         </Button>
       ))}
@@ -65,18 +64,16 @@ export default ({
           trigger={['click']}
           overlay={
             <Menu>
-              {operations.slice(moreCount).map((i) => (
+              {operations.slice(moreCount).map(i => (
                 <Menu.Item
                   key={i.key}
                   onClick={i.onClick}
-                  className={'drop-down-menu-item'}
-                >
+                  className={'drop-down-menu-item'}>
                   {i.text}
                 </Menu.Item>
               ))}
             </Menu>
-          }
-        >
+          }>
           <Button
             icon={<i className="iconfont spicon-gengduo" />}
             className={'color-6e'}
