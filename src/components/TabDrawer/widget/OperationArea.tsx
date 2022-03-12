@@ -1,9 +1,8 @@
 /**
  * 右上角操作区
  */
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { Button, Dropdown, Menu } from 'antd';
-import { MoreOutlined, SyncOutlined } from '@ant-design/icons';
 import { KeyHandleMap, Operation } from '../index';
 import '../index.less';
 
@@ -20,7 +19,7 @@ export default ({
   activeKey,
   hideReload,
   operations,
-  moreCount
+  moreCount,
 }: IProps) => {
   const [fakerLoading, setFakerLoading] = useState<boolean>(false);
 
@@ -29,7 +28,14 @@ export default ({
       {!hideReload && (
         <Button
           className={'color-6e'}
-          icon={<SyncOutlined spin={fakerLoading} />}
+          icon={
+            <i
+              style={{ position: 'relative', top: -2, display: 'block' }}
+              className={`iconfont spicon-shuaxin ${
+                fakerLoading ? 'iconfont-spin' : ''
+              }`}
+            />
+          }
           onClick={() => {
             const reload = keyHandles[activeKey];
             if (reload) {
@@ -43,12 +49,13 @@ export default ({
           type={'text'}
         />
       )}
-      {operations.slice(0, moreCount).map(i => (
+      {operations.slice(0, moreCount).map((i) => (
         <Button
           className={'color-6e'}
           onClick={i.onClick}
           key={i.key}
-          type={'text'}>
+          type={'text'}
+        >
           {i.text}
         </Button>
       ))}
@@ -58,18 +65,20 @@ export default ({
           trigger={['click']}
           overlay={
             <Menu>
-              {operations.slice(moreCount).map(i => (
+              {operations.slice(moreCount).map((i) => (
                 <Menu.Item
                   key={i.key}
                   onClick={i.onClick}
-                  className={'drop-down-menu-item'}>
+                  className={'drop-down-menu-item'}
+                >
                   {i.text}
                 </Menu.Item>
               ))}
             </Menu>
-          }>
+          }
+        >
           <Button
-            icon={<MoreOutlined />}
+            icon={<i className="iconfont spicon-gengduo" />}
             className={'color-6e'}
             type={'text'}
           />
