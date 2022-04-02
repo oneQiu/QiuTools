@@ -1,0 +1,52 @@
+.rich-editor-spin {
+  height: 100%;
+
+  .ant-spin-container {
+    height: 100%;
+  }
+
+  .rich-editor {
+    height: 100%;
+    position: relative;
+    display: flex;
+
+    .editor-container-warp {
+      flex: 1;
+      & > textarea {
+        display: none;
+      }
+
+      .tox-tinymce {
+        border-radius: 0;
+        border-width: 1px;
+      }
+    }
+
+    .auxiliary-zone {
+      overflow: scroll;
+      border: 1px solid #eee;
+      width: 200px;
+      background: white;
+      margin-right: 10px;
+      flex-shrink: 0;
+      .ant-collapse-content-box {
+        padding: 0 16px !important;
+      }
+
+      .item-warp {
+        margin-left: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        .label {
+          flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
