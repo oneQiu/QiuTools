@@ -11,7 +11,7 @@ interface IProps {
 export default ({
   onFieldClick,
   fieldList = [],
-  templateList = [],
+  templateList = []
 }: IProps) => {
   return (
     <div className="auxiliary-zone">
@@ -20,22 +20,18 @@ export default ({
         expandIcon={({ isActive }) => (
           <CaretRightOutlined rotate={isActive ? 90 : 0} />
         )}
-        ghost
-      >
+        ghost>
         {templateList.length !== 0 && (
           <Panel
             header="模板库"
             key="template"
             showArrow={false}
-            collapsible="disabled"
-          >
+            collapsible="disabled">
             {templateList.map((i, idx) => (
               <div
-                // eslint-disable-next-line react/no-array-index-key
                 key={idx}
                 className="item-warp"
-                onClick={() => onFieldClick(i)}
-              >
+                onClick={() => onFieldClick(i)}>
                 <span className="label">{i.name}</span>
                 <PlusOutlined />
               </div>
@@ -46,14 +42,12 @@ export default ({
           header="字段库"
           key="field"
           showArrow={false}
-          collapsible="disabled"
-        >
-          {fieldList.map((item) => (
+          collapsible="disabled">
+          {fieldList.map(item => (
             <div
               key={item.key}
               className="item-warp"
-              onClick={() => onFieldClick(item)}
-            >
+              onClick={() => onFieldClick(item)}>
               <span className="label">{item.name}</span>
               <PlusOutlined />
             </div>

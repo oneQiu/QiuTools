@@ -5,7 +5,8 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    hmr: true
+    hmr: true,
+    port: 3100
   },
   plugins: [react()],
   css: {
@@ -15,6 +16,23 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    exclude: [
+      '@alilc/lowcode-engine',
+      '@alilc/lowcode-editor-skeleton',
+      '@alilc/lowcode-editor-core',
+      '@alilc/lowcode-designer',
+      '@alilc/lowcode-engine-ext',
+      '@ali/lowcode-engine',
+      '@alifd/next > Next',
+      'moment > moment',
+      'lodash > _',
+      'react > React',
+      'react-dom > ReactDOM',
+      'prop-types > PropTypes'
+    ]
+  },
+  build: {},
   resolve: {
     alias: [
       {

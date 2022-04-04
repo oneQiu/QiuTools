@@ -5,21 +5,21 @@ import appRoutes from './app';
 import Blog from '@/pages/Blog';
 
 const routeConfig: RouteProps[] = [
-	{
-		path: '/',
-		component: <Layout />,
-		children: [
-			appRoutes,
-			{
-				path: '/blog/:id',
-				component: <Blog />,
-			},
-			{
-				path: '',
-				component: <Home />,
-			},
-		],
-	},
+  {
+    path: '/',
+    component: <Layout />,
+    children: [
+      appRoutes,
+      {
+        path: '/blog/:id',
+        component: <Blog />
+      },
+      {
+        path: '',
+        component: <Home />
+      }
+    ]
+  }
 ];
 
 export default routeConfig;

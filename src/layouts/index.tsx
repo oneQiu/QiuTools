@@ -5,12 +5,12 @@ import Header from './widget/Header';
 
 const { Content } = Layout;
 export default () => {
-	return (
-		<Layout className={styles['layout-warp']}>
-			<Header />
-			<Content className={styles['layout-content']}>
-				<Outlet />
-			</Content>
-		</Layout>
-	);
+  return (
+    <Layout className={styles['layout-warp']}>
+      <Header />
+      <Content className={styles['layout-content']}>
+        <Outlet />
+      </Content>
+    </Layout>
+  );
 };

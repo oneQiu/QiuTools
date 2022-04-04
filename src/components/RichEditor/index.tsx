@@ -4,17 +4,17 @@ import {
   useRef,
   LegacyRef,
   forwardRef,
-  useImperativeHandle,
+  useImperativeHandle
 } from 'react';
 import { message, Spin } from 'antd';
 import Sidebar from './widget/Sidebar';
-import { request } from 'ice';
 import { LoadingOutlined } from '@ant-design/icons';
 // 引入tinymce
 import { Editor, IAllProps } from '@tinymce/tinymce-react';
-import { baseUrl, getUrl } from './utils';
 import './index.less';
 
+const baseUrl: string =
+  'https://static-1257508274.file.myqcloud.com/tinymce/js/tinymce';
 export interface EditorRef extends Editor {
   insertHTML: (value: string) => boolean;
 }
@@ -27,7 +27,7 @@ interface IProps extends Omit<IAllProps, 'onChange' | 'onLoadContent'> {
   /** 图片上传 */
   onImageUpload?: RichEditor.UploadHandler;
   /** 字段列表 */
-  fileList: RichEditor.Field[];
+  fileList?: RichEditor.Field[];
 }
 export default forwardRef<Partial<EditorRef>, IProps>(
   (
@@ -38,10 +38,10 @@ export default forwardRef<Partial<EditorRef>, IProps>(
       value,
       onChange,
       onLoad,
-      fileList,
+      fileList = [],
       ...props
     },
-    _ref,
+    _ref
   ) => {
     const [loading, setLoading] = useState(false);
     const ref = useRef<Editor>();
@@ -49,7 +49,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
     useImperativeHandle(_ref, () => {
       return {
         ...(ref.current || {}),
-        insertHTML,
+        insertHTML
       };
     });
 
@@ -61,7 +61,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
       const isSuccess = ref.current?.editor?.execCommand(
         'insertHTML',
         false,
-        html,
+        html
       );
       if (!isSuccess) {
         message.warn('操作失败');
@@ -91,7 +91,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
       blobInfo,
       success,
       fail,
-      progress = () => {},
+      progress = () => {}
     ) => {
       const formData = new FormData();
       const file: any = await blobInfo.blob();
@@ -103,8 +103,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
       <Spin
         spinning={loading}
         wrapperClassName={'rich-editor-spin'}
-        indicator={<LoadingOutlined />}
-      >
+        indicator={<LoadingOutlined />}>
         <div className="rich-editor">
           {mode === 'auction' && (
             <Sidebar onFieldClick={onFieldClick} fieldList={fileList} />
@@ -135,7 +134,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
                   'fullscreen',
                   'preview',
                   'textpattern',
-                  'searchreplace',
+                  'searchreplace'
                 ],
                 toolbar:
                   mode === 'preview'
@@ -147,7 +146,7 @@ export default forwardRef<Partial<EditorRef>, IProps>(
                 quickbars_insert_toolbar: '',
                 quickbars_selection_toolbar:
                   'bold italic forecolor | link blockquote quickimage',
-                ...init,
+                ...init
               }}
               {...props}
             />
@@ -155,5 +154,5 @@ export default forwardRef<Partial<EditorRef>, IProps>(
         </div>
       </Spin>
     );
-  },
+  }
 );
