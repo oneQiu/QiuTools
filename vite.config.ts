@@ -18,18 +18,18 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: [
-      '@alilc/lowcode-engine',
-      '@alilc/lowcode-editor-skeleton',
-      '@alilc/lowcode-editor-core',
-      '@alilc/lowcode-designer',
-      '@alilc/lowcode-engine-ext',
-      '@ali/lowcode-engine',
-      '@alifd/next > Next',
-      'moment > moment',
-      'lodash > _',
-      'react > React',
-      'react-dom > ReactDOM',
-      'prop-types > PropTypes'
+      // '@alilc/lowcode-engine',
+      // '@alilc/lowcode-editor-skeleton',
+      // '@alilc/lowcode-editor-core',
+      // '@alilc/lowcode-designer',
+      // '@alilc/lowcode-engine-ext',
+      // '@ali/lowcode-engine',
+      // '@alifd/next',
+      // 'moment',
+      // 'lodash',
+      // 'react',
+      // 'react-dom',
+      // 'prop-types'
     ]
   },
   build: {},
