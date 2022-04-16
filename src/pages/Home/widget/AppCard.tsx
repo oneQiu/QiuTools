@@ -1,7 +1,7 @@
 import { Progress, Tag } from 'antd';
 import ProList from '@ant-design/pro-list';
 import { Fragment } from 'react';
-import { useNavigate } from 'react-router-dom';
+import useHistory from '@/hooks/useHistory';
 
 interface AppDataItem {
   title: string;
@@ -10,15 +10,14 @@ interface AppDataItem {
 }
 
 export default () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const appData: AppDataItem[] = [
     {
       title: '可视化搭建平台',
       appId: 'lowCode',
-      type: 'React'
+      type: 'React',
     },
-    { title: '代码转换Json', appId: 'codeToJson', type: 'JavaScript' },
-    { title: '富文本编辑器', appId: 'tinymce', type: 'React' }
+    { title: '富文本编辑器', appId: 'tinymce', type: 'React' },
   ];
   const data = appData.map(({ title, appId, type }) => ({
     title,
@@ -27,28 +26,30 @@ export default () => {
       <a
         key="run"
         onClick={() => {
-          navigate(`/app/${appId}`);
-        }}>
+          history.push(`/app/${appId}`);
+        }}
+      >
         查看
       </a>,
-      <a key="share">分享</a>
+      <a key="share">分享</a>,
     ],
-    avatar:
-      'https://gw.alipayobjects.com/zos/antfincdn/UCSiy1j6jx/xingzhuang.svg',
+    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/UCSiy1j6jx/xingzhuang.svg',
     content: (
       <div
         style={{
-          flex: 1
-        }}>
+          flex: 1,
+        }}
+      >
         <div
           style={{
-            width: 200
-          }}>
+            width: 200,
+          }}
+        >
           <div>开发中</div>
           <Progress percent={80} />
         </div>
       </div>
-    )
+    ),
   }));
   return (
     <Fragment>
@@ -61,7 +62,7 @@ export default () => {
           type: {},
           avatar: {},
           content: {},
-          actions: {}
+          actions: {},
         }}
         headerTitle="前端案例展示"
         dataSource={data}

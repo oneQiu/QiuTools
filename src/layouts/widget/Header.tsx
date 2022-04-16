@@ -1,26 +1,15 @@
-import {
-  PageHeader,
-  Layout,
-  Button,
-  Badge,
-  Avatar,
-  Progress,
-  Popover,
-  Divider
-} from 'antd';
+import { PageHeader, Layout, Button, Badge, Avatar, Progress, Popover, Divider } from 'antd';
 import styles from '../index.module.less';
 import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store';
-import { systemActions } from '@/store/features/system';
-import { useNavigate } from 'react-router-dom';
+import useHistory from '@/hooks/useHistory';
+import store from '@/store';
 
 const { Header } = Layout;
 
 export default () => {
-  const systemStore = useAppSelector(state => state.system);
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  const [{ loading }, dispatch] = store.useModel('layout');
+  const history = useHistory();
 
   return (
     <Fragment>
@@ -36,7 +25,7 @@ export default () => {
       <Header className={styles['layout-header']}>
         <PageHeader
           title={
-            <div style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+            <div style={{ cursor: 'pointer' }} onClick={() => history.push('/')}>
               Qite
             </div>
           }
@@ -47,8 +36,9 @@ export default () => {
                 href="#"
                 className={styles['message-warp']}
                 onClick={() => {
-                  dispatch(systemActions.setLoading());
-                }}>
+                  dispatch.setLoading();
+                }}
+              >
                 <Badge dot>
                   <MailOutlined style={{ fontSize: 18 }} />
                 </Badge>
@@ -60,7 +50,8 @@ export default () => {
                     <Divider style={{ margin: '12px 0' }} />
                     <Button type="text">退出账号</Button>
                   </Fragment>
-                }>
+                }
+              >
                 <Avatar size={40}>Admin</Avatar>
               </Popover>
             </div>
@@ -69,12 +60,12 @@ export default () => {
       </Header>
       <Loading3QuartersOutlined
         style={{
-          zIndex: systemStore.loading ? 5 : -1,
+          zIndex: loading ? 5 : -1,
           position: 'fixed',
           right: 25,
           top: 27,
           color: 'green',
-          fontSize: 24
+          fontSize: 24,
         }}
         spin
       />
