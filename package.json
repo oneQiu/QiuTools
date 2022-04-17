@@ -3,7 +3,18 @@
   "version": "0.1.0",
   "description": "Ant Design and icejs scaffold, use TypeScript.",
   "dependencies": {
-    "@alilc/lowcode-engine": "^1.0.5",
+    "@alilc/lowcode-engine-ext": "^1.0.3",
+    "@alilc/lowcode-plugin-code-editor": "^1.0.1",
+    "@alilc/lowcode-plugin-code-generator": "^1.0.2",
+    "@alilc/lowcode-plugin-components-pane": "^1.0.3",
+    "@alilc/lowcode-plugin-datasource-pane": "^1.0.3",
+    "@alilc/lowcode-plugin-inject": "^1.0.0",
+    "@alilc/lowcode-plugin-manual": "^1.0.3",
+    "@alilc/lowcode-plugin-schema": "^1.0.0",
+    "@alilc/lowcode-plugin-simulator-select": "^1.0.0",
+    "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
+    "@alilc/lowcode-plugin-zh-en": "^1.0.0",
+    "@alilc/lowcode-setter-title": "^1.0.2",
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-card": "^1.19.4",
     "@ant-design/pro-layout": "^6.35.0",
@@ -28,6 +39,7 @@
     "shortid": "^2.2.16"
   },
   "devDependencies": {
+    "@alilc/lowcode-engine": "^1.0.5",
     "@iceworks/spec": "^1.6.0",
     "@types/marked": "^4.0.3",
     "@types/node": "^17.0.24",

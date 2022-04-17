@@ -1,14 +1,28 @@
 import LowCode from '@/pages/App/LowCode';
 import ReactDnd from '@/pages/App/ReactDnd';
 import TinyMce from '@/pages/App/TinyMce';
-import { IRouterConfig } from 'ice';
+import Design from '@/pages/App/LowCode/Design';
+import { RouterConfig } from '@/routes';
 
-const routeConfig: IRouterConfig = {
+const routerConfig: RouterConfig = {
   path: '/app',
   children: [
     {
-      path: '/lowcode',
-      component: LowCode,
+      path: '/Lowcode',
+      children: [
+        {
+          path: '/',
+          component: LowCode,
+          exact: true,
+        },
+        {
+          path: '/design/:pageId?',
+          component: Design,
+          pageConfig: {
+            layout: false,
+          },
+        },
+      ],
     },
     {
       path: '/react-dnd',
@@ -20,4 +34,4 @@ const routeConfig: IRouterConfig = {
     },
   ],
 };
-export default routeConfig;
+export default routerConfig;

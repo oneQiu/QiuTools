@@ -3,3 +3,7 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
+
+#ice-container {
+  height: 100%;
+}
