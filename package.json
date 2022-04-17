@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Ant Design and icejs scaffold, use TypeScript.",
   "dependencies": {
-    "@alilc/lowcode-engine-ext": "^1.0.3",
     "@alilc/lowcode-plugin-code-editor": "^1.0.1",
     "@alilc/lowcode-plugin-code-generator": "^1.0.2",
     "@alilc/lowcode-plugin-components-pane": "^1.0.3",
