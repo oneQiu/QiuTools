@@ -3,6 +3,7 @@ import ReactDnd from '@/pages/App/ReactDnd';
 import TinyMce from '@/pages/App/TinyMce';
 import Design from '@/pages/App/LowCode/Design';
 import { RouterConfig } from '@/routes';
+import Preview from '@/pages/App/LowCode/Preview';
 
 const routerConfig: RouterConfig = {
   path: '/app',
@@ -18,6 +19,13 @@ const routerConfig: RouterConfig = {
         {
           path: '/design/:pageId?',
           component: Design,
+          pageConfig: {
+            layout: false,
+          },
+        },
+        {
+          path: '/preview/:pageId',
+          component: Preview,
           pageConfig: {
             layout: false,
           },

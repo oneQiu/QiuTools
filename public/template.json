@@ -1,0 +1,1367 @@
+{
+  "componentName": "Page",
+  "id": "root",
+  "docId": "docl23d201n",
+  "props": {},
+  "fileName": "",
+  "hidden": false,
+  "title": "",
+  "isLocked": false,
+  "condition": true,
+  "conditionGroup": "",
+  "dataSource": {
+    "list": []
+  },
+  "children": [
+    {
+      "componentName": "NextPage",
+      "id": "node_ocl23d201n1",
+      "docId": "docl23d201n",
+      "props": {
+        "headerDivider": true,
+        "minHeight": "100vh",
+        "presetNav": true,
+        "presetAside": true,
+        "footer": {
+          "type": "JSSlot",
+          "value": {
+            "componentName": "Slot",
+            "id": "node_ocl23d286c1",
+            "docId": "docl23d286c",
+            "props": {},
+            "children": [
+              {
+                "componentName": "Slot",
+                "id": "node_ocl23d201nc",
+                "docId": "docl23d201n",
+                "props": {},
+                "title": "footer",
+                "hidden": false,
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "NextPageFooter",
+                    "id": "node_ocl23d201nd",
+                    "docId": "docl23d201n",
+                    "props": {},
+                    "title": "页面脚部",
+                    "hidden": false,
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "NextRowColContainer",
+                        "id": "node_ocl23d201ne",
+                        "docId": "docl23d201n",
+                        "props": {
+                          "rowGap": 20,
+                          "colGap": 20
+                        },
+                        "title": "行列容器",
+                        "hidden": false,
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": "",
+                        "children": [
+                          {
+                            "componentName": "NextRow",
+                            "id": "node_ocl23d201nf",
+                            "docId": "docl23d201n",
+                            "props": {},
+                            "title": "行",
+                            "hidden": false,
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                              {
+                                "componentName": "NextCol",
+                                "id": "node_ocl23d201ng",
+                                "docId": "docl23d201n",
+                                "props": {
+                                  "colSpan": 1
+                                },
+                                "title": "列",
+                                "hidden": false,
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": "",
+                                "children": [
+                                  {
+                                    "componentName": "NextText",
+                                    "id": "node_ocl23d201n9h",
+                                    "docId": "docl23d201n",
+                                    "props": {
+                                      "type": "inherit",
+                                      "children": "基于 Ali-Lowcode-Engine 快速打造高生产力的低代码研发平台, 基于自然布局体系快速搭建页面",
+                                      "mark": false,
+                                      "code": false,
+                                      "delete": false,
+                                      "underline": false,
+                                      "strong": true,
+                                      "style": {
+                                        "textAlign": "center"
+                                      }
+                                    },
+                                    "hidden": false,
+                                    "title": "",
+                                    "isLocked": false,
+                                    "condition": true,
+                                    "conditionGroup": ""
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "nav": false,
+        "aside": false,
+        "placeholderStyle": {
+          "gridRowEnd": "span 1",
+          "gridColumnEnd": "span 12"
+        },
+        "headerProps": {
+          "background": "surface"
+        },
+        "header": {
+          "type": "JSSlot",
+          "value": {
+            "componentName": "Slot",
+            "id": "node_ocl23d286c2",
+            "docId": "docl23d286c",
+            "props": {},
+            "children": [
+              {
+                "componentName": "Slot",
+                "id": "node_ocl23d201n7",
+                "docId": "docl23d201n",
+                "props": {},
+                "title": "header",
+                "hidden": false,
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "NextPageHeader",
+                    "id": "node_ocl23d201n8",
+                    "docId": "docl23d201n",
+                    "props": {},
+                    "title": "页面头部",
+                    "hidden": false,
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "NextRowColContainer",
+                        "id": "node_ocl23d201n9",
+                        "docId": "docl23d201n",
+                        "props": {
+                          "rowGap": 20,
+                          "colGap": 20
+                        },
+                        "title": "行列容器",
+                        "hidden": false,
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": "",
+                        "children": [
+                          {
+                            "componentName": "NextRow",
+                            "id": "node_ocl23d201na",
+                            "docId": "docl23d201n",
+                            "props": {},
+                            "title": "行",
+                            "hidden": false,
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                              {
+                                "componentName": "NextCol",
+                                "id": "node_ocl23d201nb",
+                                "docId": "docl23d201n",
+                                "props": {
+                                  "colSpan": 1
+                                },
+                                "title": "列",
+                                "hidden": false,
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": "",
+                                "children": [
+                                  {
+                                    "componentName": "NextText",
+                                    "id": "node_ocl23d286ct",
+                                    "docId": "docl23d286c",
+                                    "props": {
+                                      "type": "h4",
+                                      "children": "标题标题",
+                                      "mark": false,
+                                      "code": false,
+                                      "delete": false,
+                                      "underline": false,
+                                      "strong": false
+                                    },
+                                    "hidden": false,
+                                    "title": "",
+                                    "isLocked": false,
+                                    "condition": true,
+                                    "conditionGroup": ""
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "isTab": true,
+        "items": [
+          {
+            "primaryKey": "node_ocl23d201nh",
+            "title": "首页"
+          },
+          {
+            "primaryKey": "5846",
+            "title": "第二个"
+          },
+          {
+            "primaryKey": "8860",
+            "title": "第三个"
+          }
+        ],
+        "contentAlignCenter": false,
+        "contentProps": {
+          "style": {
+            "background": "rgba(255,255,255,0)"
+          }
+        },
+        "tabProps": {
+          "shape": "pure",
+          "size": "medium",
+          "excessMode": "slide"
+        }
+      },
+      "title": "页面",
+      "hidden": false,
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "NextPageContent",
+          "id": "node_ocl23d201nh",
+          "docId": "docl23d201n",
+          "props": {
+            "isTab": true,
+            "nav": false,
+            "aside": false,
+            "presetNav": true,
+            "presetAside": true,
+            "title": "首页",
+            "style": {
+              "background": "transparent"
+            }
+          },
+          "title": "页面主体",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "ProCard",
+              "id": "node_ocl23d201nz",
+              "docId": "docl23d201n",
+              "props": {
+                "title": "标题",
+                "hasDivider": true,
+                "isFillContainer": true,
+                "loading": false,
+                "bodyPadding": "",
+                "hasCollapse": false,
+                "text": true,
+                "visibleButtonCount": 3,
+                "operationConfig": {
+                  "align": "center"
+                },
+                "operations": []
+              },
+              "hidden": false,
+              "title": "",
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "NextRowColContainer",
+                  "id": "node_ocl23d201n12",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "rowGap": 20,
+                    "colGap": 20
+                  },
+                  "title": "行列容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "NextRow",
+                      "id": "node_ocl23d201n13",
+                      "docId": "docl23d201n",
+                      "props": {},
+                      "title": "行",
+                      "hidden": false,
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": "",
+                      "children": [
+                        {
+                          "componentName": "NextCol",
+                          "id": "node_ocl23d201n14",
+                          "docId": "docl23d201n",
+                          "props": {
+                            "colSpan": 1,
+                            "justifyContent": "flex-start"
+                          },
+                          "title": "列",
+                          "hidden": false,
+                          "isLocked": false,
+                          "condition": true,
+                          "conditionGroup": "",
+                          "children": [
+                            {
+                              "componentName": "ProCard",
+                              "id": "node_ocl23d201n2k",
+                              "docId": "docl23d201n",
+                              "props": {
+                                "title": "条形图",
+                                "hasDivider": true,
+                                "isFillContainer": true,
+                                "loading": false,
+                                "bodyPadding": "",
+                                "hasCollapse": false,
+                                "text": true,
+                                "visibleButtonCount": 3,
+                                "operations": []
+                              },
+                              "hidden": false,
+                              "title": "",
+                              "isLocked": false,
+                              "condition": true,
+                              "conditionGroup": "",
+                              "children": [
+                                {
+                                  "componentName": "BarChart",
+                                  "id": "node_ocl23d201n2l",
+                                  "docId": "docl23d201n",
+                                  "props": {
+                                    "data": [
+                                      {
+                                        "year": "1991",
+                                        "value": 72345678
+                                      },
+                                      {
+                                        "year": "1992",
+                                        "value": 4321132
+                                      },
+                                      {
+                                        "year": "1993",
+                                        "value": 33121112.5
+                                      },
+                                      {
+                                        "year": "1994",
+                                        "value": 45227221
+                                      },
+                                      {
+                                        "year": "1995",
+                                        "value": 4321221.9
+                                      },
+                                      {
+                                        "year": "1996",
+                                        "value": 6322121
+                                      },
+                                      {
+                                        "year": "1997",
+                                        "value": 78312213
+                                      },
+                                      {
+                                        "year": "1998",
+                                        "value": 4192312
+                                      },
+                                      {
+                                        "year": "1999",
+                                        "value": 6212332
+                                      },
+                                      {
+                                        "year": "2000",
+                                        "value": 3192312
+                                      }
+                                    ],
+                                    "xField": "value",
+                                    "yField": "year",
+                                    "color": "#0079f2",
+                                    "label": {
+                                      "visible": true,
+                                      "position": "middle"
+                                    }
+                                  },
+                                  "hidden": false,
+                                  "title": "",
+                                  "isLocked": false,
+                                  "condition": true,
+                                  "conditionGroup": ""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "componentName": "NextCol",
+                          "id": "node_ocl23d201n17",
+                          "docId": "docl23d201n",
+                          "props": {
+                            "colSpan": 1
+                          },
+                          "title": "列",
+                          "hidden": false,
+                          "isLocked": false,
+                          "condition": true,
+                          "conditionGroup": "",
+                          "children": [
+                            {
+                              "componentName": "ProCard",
+                              "id": "node_ocl23d201n42",
+                              "docId": "docl23d201n",
+                              "props": {
+                                "title": "柱状图",
+                                "hasDivider": true,
+                                "isFillContainer": true,
+                                "loading": false,
+                                "bodyPadding": "",
+                                "hasCollapse": false,
+                                "text": true,
+                                "visibleButtonCount": 3,
+                                "operations": []
+                              },
+                              "hidden": false,
+                              "title": "",
+                              "isLocked": false,
+                              "condition": true,
+                              "conditionGroup": "",
+                              "children": [
+                                {
+                                  "componentName": "ColumnChart",
+                                  "id": "node_ocl23d201n43",
+                                  "docId": "docl23d201n",
+                                  "props": {
+                                    "data": [
+                                      {
+                                        "year": "1991",
+                                        "value": 72345678
+                                      },
+                                      {
+                                        "year": "1992",
+                                        "value": 4321132
+                                      },
+                                      {
+                                        "year": "1993",
+                                        "value": 33121112.5
+                                      },
+                                      {
+                                        "year": "1994",
+                                        "value": 45227221
+                                      },
+                                      {
+                                        "year": "1995",
+                                        "value": 4321221.9
+                                      },
+                                      {
+                                        "year": "1996",
+                                        "value": 6322121
+                                      },
+                                      {
+                                        "year": "1997",
+                                        "value": 78312213
+                                      },
+                                      {
+                                        "year": "1998",
+                                        "value": 4192312
+                                      },
+                                      {
+                                        "year": "1999",
+                                        "value": 6212332
+                                      },
+                                      {
+                                        "year": "2000",
+                                        "value": 3192312
+                                      }
+                                    ],
+                                    "xField": "year",
+                                    "yField": "value",
+                                    "color": "#0079f2",
+                                    "label": {
+                                      "visible": true,
+                                      "position": "middle"
+                                    }
+                                  },
+                                  "hidden": false,
+                                  "title": "",
+                                  "isLocked": false,
+                                  "condition": true,
+                                  "conditionGroup": ""
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "componentName": "NextPageContent",
+          "id": "node_ocl23d201ni",
+          "docId": "docl23d201n",
+          "props": {
+            "isTab": true,
+            "nav": false,
+            "aside": false,
+            "presetNav": true,
+            "presetAside": true,
+            "title": "第二个",
+            "primaryKey": "5846"
+          },
+          "title": "页面主体",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "AnchorForm",
+              "id": "node_ocl23d201n44",
+              "docId": "docl23d201n",
+              "props": {
+                "showAnchor": true,
+                "anchorProps": {
+                  "direction": "hoz",
+                  "hasAffix": false
+                },
+                "operationConfig": {
+                  "visibleButtonCount": 3,
+                  "align": "center"
+                },
+                "operations": []
+              },
+              "hidden": false,
+              "title": "",
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "ChildForm",
+                  "id": "node_ocl23d201n4p",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "columns": 2,
+                    "htmlId": "id-s1a725",
+                    "mode": "independent",
+                    "anchorItemProps": {
+                      "htmlId": "id-s1a725",
+                      "label": "Tab1"
+                    },
+                    "cardProps": {
+                      "htmlId": "id-s1a725"
+                    },
+                    "labelAlign": "top"
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4q",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-7eq8bt",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4r",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-5twgxs",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4s",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-5guuis",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4t",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-zsetfo",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    }
+                  ]
+                },
+                {
+                  "componentName": "ChildForm",
+                  "id": "node_ocl23d201n4u",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "columns": 2,
+                    "htmlId": "id-z571mj",
+                    "mode": "independent",
+                    "anchorItemProps": {
+                      "htmlId": "id-z571mj",
+                      "label": "Tab2"
+                    },
+                    "cardProps": {
+                      "htmlId": "id-z571mj"
+                    },
+                    "labelAlign": "top"
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4v",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-yh1fv2",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4w",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-6rr6h3",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4x",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-7tajid",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n4y",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-8zoqxc",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    }
+                  ]
+                },
+                {
+                  "componentName": "ChildForm",
+                  "id": "node_ocl23d201n4z",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "columns": 2,
+                    "htmlId": "id-muwh7s",
+                    "mode": "independent",
+                    "anchorItemProps": {
+                      "htmlId": "id-muwh7s",
+                      "label": "Tab3"
+                    },
+                    "cardProps": {
+                      "htmlId": "id-muwh7s"
+                    },
+                    "labelAlign": "top"
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n50",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-vdmf59",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n51",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-fzcdzy",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n52",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-opf8xc",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n53",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-r9m6r4",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    }
+                  ]
+                },
+                {
+                  "componentName": "ChildForm",
+                  "id": "node_ocl23d201n54",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "columns": 2,
+                    "htmlId": "id-ns2lb5",
+                    "mode": "independent",
+                    "anchorItemProps": {
+                      "htmlId": "id-ns2lb5",
+                      "label": "Tab4"
+                    },
+                    "cardProps": {
+                      "htmlId": "id-ns2lb5"
+                    },
+                    "labelAlign": "top"
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n55",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-kajln9",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n56",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-b27qpf",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n57",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-qsdziv",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    },
+                    {
+                      "componentName": "FormInput",
+                      "id": "node_ocl23d201n58",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "formItemProps": {
+                          "primaryKey": "id-catw8i",
+                          "label": "表单项",
+                          "size": "medium",
+                          "device": "desktop",
+                          "fullWidth": true
+                        },
+                        "placeholder": "请输入"
+                      },
+                      "hidden": false,
+                      "title": "",
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "componentName": "NextPageContent",
+          "id": "node_ocl23d201no",
+          "docId": "docl23d201n",
+          "props": {
+            "isTab": true,
+            "nav": false,
+            "aside": false,
+            "presetNav": true,
+            "presetAside": true,
+            "title": "第三个",
+            "primaryKey": "8860"
+          },
+          "title": "页面主体",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "NextBlock",
+              "id": "node_ocl23d201n5t",
+              "docId": "docl23d201n",
+              "props": {
+                "placeholderStyle": {
+                  "height": "100%"
+                },
+                "noPadding": false,
+                "noBorder": false,
+                "title": "区域标题",
+                "rowGap": 20,
+                "colGap": 20,
+                "background": "surface",
+                "layoutmode": "O",
+                "strict": true,
+                "colSpan": 12,
+                "rowSpan": 1,
+                "mode": "transparent",
+                "childTotalColumns": 12
+              },
+              "title": "区域",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "NextBlockCell",
+                  "id": "node_ocl23d201n5u",
+                  "docId": "docl23d201n",
+                  "props": {
+                    "colSpan": 12,
+                    "rowSpan": 1,
+                    "mode": "procard",
+                    "isAutoContainer": true,
+                    "title": "区块标题"
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": "",
+                  "children": [
+                    {
+                      "componentName": "NextRowColContainer",
+                      "id": "node_ocl23d201n5v",
+                      "docId": "docl23d201n",
+                      "props": {
+                        "rowGap": 20,
+                        "colGap": 20
+                      },
+                      "title": "行列容器",
+                      "hidden": false,
+                      "isLocked": false,
+                      "condition": true,
+                      "conditionGroup": "",
+                      "children": [
+                        {
+                          "componentName": "NextRow",
+                          "id": "node_ocl23d201n5w",
+                          "docId": "docl23d201n",
+                          "props": {},
+                          "title": "行",
+                          "hidden": false,
+                          "isLocked": false,
+                          "condition": true,
+                          "conditionGroup": "",
+                          "children": [
+                            {
+                              "componentName": "NextCol",
+                              "id": "node_ocl23d201n5x",
+                              "docId": "docl23d201n",
+                              "props": {
+                                "colSpan": 1
+                              },
+                              "title": "列",
+                              "hidden": false,
+                              "isLocked": false,
+                              "condition": true,
+                              "conditionGroup": "",
+                              "children": [
+                                {
+                                  "componentName": "NextP",
+                                  "id": "node_ocl23d201n5y",
+                                  "docId": "docl23d201n",
+                                  "props": {
+                                    "wrap": false,
+                                    "type": "body2",
+                                    "verAlign": "middle",
+                                    "textSpacing": true,
+                                    "align": "left"
+                                  },
+                                  "title": "段落",
+                                  "hidden": false,
+                                  "isLocked": false,
+                                  "condition": true,
+                                  "conditionGroup": "",
+                                  "children": [
+                                    {
+                                      "componentName": "StepForm",
+                                      "id": "node_ocl23d201n5z",
+                                      "docId": "docl23d201n",
+                                      "props": {
+                                        "current": 0,
+                                        "operations": [
+                                          {
+                                            "content": "上一步",
+                                            "action": "previous",
+                                            "type": "secondary"
+                                          },
+                                          {
+                                            "content": "下一步",
+                                            "action": "next",
+                                            "type": "primary"
+                                          }
+                                        ]
+                                      },
+                                      "hidden": false,
+                                      "title": "",
+                                      "isLocked": false,
+                                      "condition": true,
+                                      "conditionGroup": "",
+                                      "children": [
+                                        {
+                                          "componentName": "ProForm",
+                                          "id": "node_ocl23d201n5a",
+                                          "docId": "docl23d201n",
+                                          "props": {
+                                            "stepItemProps": {
+                                              "title": "StepItem"
+                                            }
+                                          },
+                                          "hidden": false,
+                                          "title": "",
+                                          "isLocked": false,
+                                          "condition": true,
+                                          "conditionGroup": "",
+                                          "children": [
+                                            {
+                                              "componentName": "FormInput",
+                                              "id": "node_ocl23d201n5b",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "formItemProps": {
+                                                  "primaryKey": "2058",
+                                                  "label": "表单项",
+                                                  "size": "medium",
+                                                  "device": "desktop",
+                                                  "fullWidth": true
+                                                },
+                                                "placeholder": "请输入"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": ""
+                                            },
+                                            {
+                                              "componentName": "FormInput",
+                                              "id": "node_ocl23d201n5c",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "formItemProps": {
+                                                  "primaryKey": "596",
+                                                  "label": "表单项",
+                                                  "size": "medium",
+                                                  "device": "desktop",
+                                                  "fullWidth": true
+                                                },
+                                                "placeholder": "请输入"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": ""
+                                            },
+                                            {
+                                              "componentName": "FormInput",
+                                              "id": "node_ocl23d201n5d",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "formItemProps": {
+                                                  "primaryKey": "4147",
+                                                  "label": "表单项",
+                                                  "size": "medium",
+                                                  "device": "desktop",
+                                                  "fullWidth": true
+                                                },
+                                                "placeholder": "请输入"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "componentName": "ProForm",
+                                          "id": "node_ocl23d201n5e",
+                                          "docId": "docl23d201n",
+                                          "props": {
+                                            "stepItemProps": {
+                                              "title": "StepItem"
+                                            }
+                                          },
+                                          "hidden": false,
+                                          "title": "",
+                                          "isLocked": false,
+                                          "condition": true,
+                                          "conditionGroup": "",
+                                          "children": [
+                                            {
+                                              "componentName": "ProFormItem",
+                                              "id": "node_ocl23d201n5f",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "primaryKey": "2045",
+                                                "label": "表单项",
+                                                "size": "medium",
+                                                "device": "desktop"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": "",
+                                              "children": [
+                                                {
+                                                  "componentName": "FormInput",
+                                                  "id": "node_ocl23d201n5g",
+                                                  "docId": "docl23d201n",
+                                                  "props": {
+                                                    "hasBorder": true,
+                                                    "size": "medium",
+                                                    "autoComplete": "off"
+                                                  },
+                                                  "hidden": false,
+                                                  "title": "",
+                                                  "isLocked": false,
+                                                  "condition": true,
+                                                  "conditionGroup": ""
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "componentName": "ProFormItem",
+                                              "id": "node_ocl23d201n5h",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "primaryKey": "1471",
+                                                "label": "表单项",
+                                                "size": "medium",
+                                                "device": "desktop"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": "",
+                                              "children": [
+                                                {
+                                                  "componentName": "FormInput",
+                                                  "id": "node_ocl23d201n5i",
+                                                  "docId": "docl23d201n",
+                                                  "props": {
+                                                    "hasBorder": true,
+                                                    "size": "medium",
+                                                    "autoComplete": "off"
+                                                  },
+                                                  "hidden": false,
+                                                  "title": "",
+                                                  "isLocked": false,
+                                                  "condition": true,
+                                                  "conditionGroup": ""
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "componentName": "ProFormItem",
+                                              "id": "node_ocl23d201n5j",
+                                              "docId": "docl23d201n",
+                                              "props": {
+                                                "primaryKey": "2988",
+                                                "label": "表单项",
+                                                "size": "medium",
+                                                "device": "desktop"
+                                              },
+                                              "hidden": false,
+                                              "title": "",
+                                              "isLocked": false,
+                                              "condition": true,
+                                              "conditionGroup": "",
+                                              "children": [
+                                                {
+                                                  "componentName": "FormInput",
+                                                  "id": "node_ocl23d201n5k",
+                                                  "docId": "docl23d201n",
+                                                  "props": {
+                                                    "hasBorder": true,
+                                                    "size": "medium",
+                                                    "autoComplete": "off"
+                                                  },
+                                                  "hidden": false,
+                                                  "title": "",
+                                                  "isLocked": false,
+                                                  "condition": true,
+                                                  "conditionGroup": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
