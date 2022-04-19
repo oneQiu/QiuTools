@@ -111,12 +111,19 @@ export default () => {
     });
   };
 
+  const goCreate = () => {
+    history.push('/app/lowcode/design');
+  };
+
   return (
     <Card>
       <ProTable
         headerTitle="页面列表"
         columns={columns}
         toolBarRender={() => [
+          <Button type="primary" ghost onClick={goCreate}>
+            试玩一下
+          </Button>,
           <Button type="primary" onClick={onCreatePage}>
             新建页面
           </Button>,
