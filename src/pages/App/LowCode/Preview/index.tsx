@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { Loading } from '@alifd/next';
-import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
+import { buildComponents, AssetLoader } from '@alilc/lowcode-utils';
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
+import { useParams } from 'ice';
+import { getLSName } from '../Design/plugins/utils';
 
 export default () => {
+  const { pageId }: any = useParams();
   const [data, setData] = useState<any>({});
 
   async function init() {
-    const packages = JSON.parse(window.localStorage.getItem('packages') || '');
-    const projectSchema = JSON.parse(window.localStorage.getItem('projectSchema') || '');
+    const packages = JSON.parse(localStorage.getItem(getLSName(pageId, 'packages')) || '');
+    const projectSchema = JSON.parse(localStorage.getItem(getLSName(pageId)) || '');
     const { componentsMap: componentsMapArray, componentsTree } = projectSchema;
     const componentsMap: any = {};
     componentsMapArray.forEach((component: any) => {
@@ -27,10 +30,6 @@ export default () => {
         libraryAsset.push(urls);
       }
     });
-
-    const vendors = [assetBundle(libraryAsset, AssetLevel.Library)];
-
-    // TODO asset may cause pollution
     const assetLoader = new AssetLoader();
     await assetLoader.load(libraryAsset);
     const components = await injectComponents(

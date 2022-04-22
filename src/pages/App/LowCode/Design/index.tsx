@@ -1,6 +1,7 @@
 import { init } from '@alilc/lowcode-engine';
 import { useEffect } from 'react';
 import registerPlugins from './plugins';
+import { useParams } from 'ice';
 import './index.less';
 
 const preference = new Map();
@@ -17,13 +18,15 @@ preference.set('DataSourcePane', {
 });
 
 export default () => {
+  const { pageId }: any = useParams();
+
   useEffect(() => {
     onLoad();
   }, []);
 
   const onLoad = async () => {
+    (window as any).pageId = pageId;
     await registerPlugins();
-
     init(
       document.getElementById('low-code')!,
       {

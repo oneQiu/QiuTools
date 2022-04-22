@@ -1,5 +1,7 @@
+import { Logo } from '@/components/Icon';
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
+import { onPreview, resetSchema, saveSchemaToLocal } from './utils';
 
 // 注册保存面板
 const HeaderPlugin = (ctx: ILowCodePluginContext) => {
@@ -8,12 +10,11 @@ const HeaderPlugin = (ctx: ILowCodePluginContext) => {
     async init() {
       const { skeleton, hotkey } = ctx;
       // 注册 logo 面板
-
       skeleton.add({
         area: 'topArea',
         type: 'Widget',
         name: 'logo',
-        content: <div>logo</div>,
+        content: <Logo logoSize="small" />,
         contentProps: {
           logo: 'https://img.alicdn.com/tfs/TB1_SocGkT2gK0jSZFkXXcIQFXa-66-66.png',
           href: '/',
@@ -31,7 +32,7 @@ const HeaderPlugin = (ctx: ILowCodePluginContext) => {
           align: 'right',
         },
         content: (
-          <Button danger type="primary" ghost onClick={() => {}}>
+          <Button danger type="primary" className="font-size-12" ghost onClick={resetSchema}>
             重置页面
           </Button>
         ),
@@ -43,7 +44,11 @@ const HeaderPlugin = (ctx: ILowCodePluginContext) => {
         props: {
           align: 'right',
         },
-        content: <Button onClick={() => {}}>保存到本地</Button>,
+        content: (
+          <Button className="font-size-12" onClick={saveSchemaToLocal}>
+            保存到本地
+          </Button>
+        ),
       });
       skeleton.add({
         name: 'save',
@@ -53,7 +58,14 @@ const HeaderPlugin = (ctx: ILowCodePluginContext) => {
           align: 'right',
         },
         content: (
-          <Button type="primary" ghost onClick={() => {}}>
+          <Button
+            className="font-size-12"
+            type="primary"
+            ghost
+            onClick={() => {
+              message.warn('暂无接口报错');
+            }}
+          >
             保存
           </Button>
         ),
@@ -66,7 +78,7 @@ const HeaderPlugin = (ctx: ILowCodePluginContext) => {
           align: 'right',
         },
         content: (
-          <Button type="primary" onClick={() => {}}>
+          <Button className="font-size-12" type="primary" onClick={onPreview}>
             预览
           </Button>
         ),

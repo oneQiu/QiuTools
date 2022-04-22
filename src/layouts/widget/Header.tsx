@@ -2,14 +2,13 @@ import { PageHeader, Layout, Button, Badge, Avatar, Progress, Popover, Divider }
 import styles from '../index.module.less';
 import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
-import useHistory from '@/hooks/useHistory';
 import store from '@/store';
+import { Logo } from '@/components/Icon';
 
 const { Header } = Layout;
 
 export default () => {
   const [{ loading }, dispatch] = store.useModel('layout');
-  const history = useHistory();
 
   return (
     <Fragment>
@@ -24,12 +23,7 @@ export default () => {
       />
       <Header className={styles['layout-header']}>
         <PageHeader
-          title={
-            <div style={{ cursor: 'pointer' }} onClick={() => history.push('/')}>
-              Qite
-            </div>
-          }
-          subTitle="This is Qite"
+          title={<Logo />}
           extra={
             <div className={styles['right-warp']}>
               <a

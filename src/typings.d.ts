@@ -18,3 +18,5 @@ declare module '*.md' {}
 declare type AnyObj<T = any> = {
   [key in string | number]: T;
 };
+
+declare module '*.json' {}
