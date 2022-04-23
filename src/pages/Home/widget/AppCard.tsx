@@ -53,7 +53,7 @@ export default () => {
   }));
   return (
     <Fragment>
-      <h2 style={{ margin: 20 }}>Demo</h2>
+      <h2 style={{ margin: 20 }}>应用</h2>
       <ProList<any>
         grid={{ gutter: 16, column: 2 }}
         metas={{

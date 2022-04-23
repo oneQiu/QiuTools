@@ -1,4 +1,4 @@
-import { PageHeader, Layout, Button, Badge, Avatar, Progress, Popover, Divider } from 'antd';
+import { PageHeader, Layout, Badge, Avatar, Progress, Menu, Dropdown } from 'antd';
 import styles from '../index.module.less';
 import { MailOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Fragment } from 'react';
@@ -9,6 +9,7 @@ const { Header } = Layout;
 
 export default () => {
   const [{ loading }, dispatch] = store.useModel('layout');
+  const menu = <Menu items={[{ label: <a href="#">查看资料</a> }, { label: <a href="#">退出账号</a> }]} />;
 
   return (
     <Fragment>
@@ -37,17 +38,9 @@ export default () => {
                   <MailOutlined style={{ fontSize: 18 }} />
                 </Badge>
               </a>
-              <Popover
-                content={
-                  <Fragment>
-                    <Button type="text">查看资料</Button>
-                    <Divider style={{ margin: '12px 0' }} />
-                    <Button type="text">退出账号</Button>
-                  </Fragment>
-                }
-              >
+              <Dropdown overlay={menu} arrow>
                 <Avatar size={40}>Admin</Avatar>
-              </Popover>
+              </Dropdown>
             </div>
           }
         />

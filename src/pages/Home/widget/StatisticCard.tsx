@@ -25,7 +25,6 @@ export default () => {
               />
             ))}
           </StatisticCard.Group>
-          <Divider />
           <Calendar onPanelChange={() => {}} fullscreen={false} />
         </Col>
       </Row>

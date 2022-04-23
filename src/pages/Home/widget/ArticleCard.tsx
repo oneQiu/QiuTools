@@ -30,7 +30,7 @@ export default () => {
   const history = useHistory();
   return (
     <Fragment>
-      <h2 style={{ margin: 20 }}>推荐</h2>
+      <h2 style={{ margin: 20 }}>文章</h2>
       <ProList<DataItem>
         toolBarRender={() => {
           return [
@@ -42,10 +42,11 @@ export default () => {
         itemLayout="vertical"
         rowKey="id"
         headerTitle={
-          <Radio.Group buttonStyle="solid" defaultValue="large">
-            <Radio.Button value="large">Large</Radio.Button>
-            <Radio.Button value="default">Default</Radio.Button>
-            <Radio.Button value="small">Small</Radio.Button>
+          <Radio.Group buttonStyle="solid" defaultValue="all">
+            <Radio.Button value="all">所有</Radio.Button>
+            <Radio.Button value="jsvascript">JavaScript</Radio.Button>
+            <Radio.Button value="react">React</Radio.Button>
+            <Radio.Button value="other">其他</Radio.Button>
           </Radio.Group>
         }
         footer={

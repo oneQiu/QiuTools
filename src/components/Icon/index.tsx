@@ -15,22 +15,29 @@ export default (props: IconFontProps) => {
 interface LogoProps {
   showText?: boolean;
   logoSize?: 'small' | 'normal' | 'large' | number;
+  notHref?: boolean;
 }
-export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal' }) => {
+export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal', notHref }) => {
   const history = useHistory();
   const _size = {
     small: 24,
     normal: 36,
     large: 48,
   };
+
   const toHome = () => {
-    history.push('/');
+    if (notHref) return;
+    try {
+      history.push('/');
+    } catch (error) {
+      location.href = location.origin;
+    }
   };
 
   return (
     <Space align="center" onClick={toHome} style={{ cursor: 'pointer' }}>
       <Icon type="icon-codepipelineCodePipeline" style={{ fontSize: _size[logoSize] || logoSize }} />
-      {showText && <span style={{ fontWeight: 'bold' }}>Qite</span>}
+      {showText && <span style={{ fontWeight: 'bold', userSelect: 'none' }}>Qite</span>}
     </Space>
   );
 };
