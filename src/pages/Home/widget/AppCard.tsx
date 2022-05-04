@@ -23,7 +23,7 @@ export default () => {
       title: 'Qooi组件库',
       appId: 'qooi',
       type: 'React',
-      href: '',
+      href: 'oneqiu.cn/qooi',
     },
   ];
   const data = appData.map(({ title, appId, type, href }) => ({
