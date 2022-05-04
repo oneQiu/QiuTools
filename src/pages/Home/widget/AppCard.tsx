@@ -7,6 +7,7 @@ interface AppDataItem {
   title: string;
   appId: string;
   type: 'React' | 'Vue' | 'JavaScript';
+  href?: string;
 }
 
 export default () => {
@@ -18,15 +19,25 @@ export default () => {
       type: 'React',
     },
     { title: '富文本编辑器', appId: 'tinymce', type: 'React' },
+    {
+      title: 'Qooi组件库',
+      appId: 'qooi',
+      type: 'React',
+      href: '',
+    },
   ];
-  const data = appData.map(({ title, appId, type }) => ({
+  const data = appData.map(({ title, appId, type, href }) => ({
     title,
     subTitle: <Tag color="#5BD8A6">{type} 专栏</Tag>,
     actions: [
       <a
         key="run"
         onClick={() => {
-          history.push(`/app/${appId}`);
+          if (href) {
+            window.open(href);
+          } else {
+            history.push(`/app/${appId}`);
+          }
         }}
       >
         查看
