@@ -22,15 +22,7 @@
         "libraryName": "antd"
       }
     ],
-    [
-      "build-plugin-antd",
-      {
-        "disableModularImport": true,
-        "themeConfig": {
-          "primary-color": "#65B0FF"
-        }
-      }
-    ],
     "./build.plugin.js"
-  ]
+  ],
+  "sourceMap": false
 }
