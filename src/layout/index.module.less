@@ -1,0 +1,49 @@
+.layout-warp {
+  background: #f5f9fc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.layout-content {
+  flex: 1;
+  overflow: scroll;
+  margin: 0 auto;
+  max-width: 1600px;
+  min-width: 1200px;
+  padding: 20px 50px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.layout-header {
+  box-shadow: 0 2px 8px #f0f1f2;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 100;
+  .right-warp {
+    display: flex;
+    align-items: center;
+    .message-warp {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      margin: 0 20px;
+      justify-content: center;
+    }
+  }
+}
+
+.progress {
+  position: fixed;
+  top: -10px;
+  z-index: 3;
+}
