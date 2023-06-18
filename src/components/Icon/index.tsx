@@ -2,6 +2,7 @@ import { createFromIconfontCN } from '@ant-design/icons';
 import { type IconFontProps } from '@ant-design/icons/lib/components/IconFont';
 import { Space } from 'antd';
 import { type FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Icon = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_3006105_fbnyc96g2gf.js'
@@ -18,6 +19,7 @@ interface LogoProps {
 }
 
 export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal', notHref }) => {
+  const navigate = useNavigate();
   const _size = {
     small: 24,
     normal: 36,
@@ -27,7 +29,7 @@ export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal', notH
   const toHome = () => {
     if (notHref) return;
     try {
-      // history.push('/');
+      navigate('/');
     } catch (error) {
       location.href = location.origin;
     }

@@ -16,7 +16,7 @@ export default () => {
   const appData: AppDataItem[] = [
     {
       title: '可视化搭建平台',
-      appId: 'lowCode',
+      appId: 'lowcode',
       type: 'React'
     },
     { title: '富文本编辑器', appId: 'tinymce', type: 'React' },

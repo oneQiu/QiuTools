@@ -11,7 +11,7 @@ export default defineConfig({
   },
   server: {
     port: 4000,
-    open: true,
+    open: true
   },
   css: {
     modules: {

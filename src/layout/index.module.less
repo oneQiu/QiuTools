@@ -14,23 +14,28 @@
   max-width: 1600px;
   min-width: 1200px;
   padding: 20px 50px;
+
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
 .layout-header {
-  box-shadow: 0 2px 8px #f0f1f2;
+  max-width: 1600px;
+  min-width: 400px;
+  padding: 0;
+  margin: 0 auto;
+  position: sticky;
   background: white;
-  position: fixed;
   top: 0;
-  left: 0;
   height: 60px;
   width: 100%;
   z-index: 100;
+
   .right-warp {
     display: flex;
     align-items: center;
+
     .message-warp {
       display: flex;
       align-items: center;
@@ -40,6 +45,12 @@
       justify-content: center;
     }
   }
+}
+
+.layout-header-placeholder {
+  box-shadow: 0 2px 8px #f0f1f2;
+  background: white;
+  height: 60px;
 }
 
 .progress {
