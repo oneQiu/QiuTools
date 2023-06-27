@@ -1,5 +1,5 @@
 import { Row, Col, Card, Calendar } from 'antd';
-import ReactECharts from 'echarts-for-react';
+// import ReactECharts from 'echarts-for-react';
 import styles from '../index.module.less';
 import { StatisticCard } from '@ant-design/pro-card';
 import { option, StatisticList } from './schema';
@@ -10,7 +10,8 @@ export default () => {
     <Card className={styles['statistic-card-warp']}>
       <Row justify="space-between">
         <Col span={6}>
-          <ReactECharts option={option} />
+          Test
+          {/* <ReactECharts option={option} /> */}
         </Col>
         <Col span={16}>
           <StatisticCard.Group direction="row">
