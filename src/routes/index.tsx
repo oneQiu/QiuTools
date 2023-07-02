@@ -3,8 +3,13 @@ import Home from '@/pages/home';
 import Layout from '@/layout';
 import app from '@/routes/appRoutes.tsx';
 import Blog from '@/pages/blog';
+import Login from '@/pages/login';
 
 export default createBrowserRouter([
+  {
+    path: '/login',
+    element: <Login />,
+  },
   {
     path: '/',
     element: <Layout />,
@@ -12,13 +17,12 @@ export default createBrowserRouter([
       app,
       {
         path: '/blog/:id',
-        element: <Blog />
+        element: <Blog />,
       },
       {
         path: '/',
-        element: <Home />
-      }
-    ]
-  }
+        element: <Home />,
+      },
+    ],
+  },
 ]);
-
