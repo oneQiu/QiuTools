@@ -24,6 +24,7 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.3",
     "rehype-autolink-headings": "^6.1.1",
+    "lottie-react": "^2.4.0",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1"
   },
