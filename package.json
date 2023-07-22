@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "@ant-design/pro-components": "^2.5.11",
     "@reduxjs/toolkit": "^1.9.5",
     "antd": "^5.6.1",
     "axios": "^1.4.0",
     "echarts-for-react": "^3.0.2",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
@@ -24,7 +26,6 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.3",
     "rehype-autolink-headings": "^6.1.1",
-    "lottie-react": "^2.4.0",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1"
   },
