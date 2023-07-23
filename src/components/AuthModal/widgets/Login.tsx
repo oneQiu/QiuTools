@@ -1,27 +1,57 @@
-import { Button, Checkbox, Form, Input, Space } from 'antd';
+import { Button, Checkbox, Form, Input, Space, message } from 'antd';
 import { CloseOutlined, GithubOutlined } from '@ant-design/icons';
 import styles from './index.module.less';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { authRoot } from '..';
+import { signIn } from '@/services/user';
+import { sleep } from '@/utils/toolkit';
+import { REMEBER_PASSWORD, TOKEN_KEY } from '@/constants/storageKey';
 
-interface LoginProps {
-  onClose: () => void;
-}
-
-const Login: FC<LoginProps> = ({ onClose }) => {
-  const [wrapClassnames, setWrapClassnames] = useState([
-    styles['login-modal'],
-    styles.active,
-  ]);
+const Login = () => {
+  const [isActive, setIsActive] = useState(false);
+  const [wrapStyle, setWrapStyle] = useState<any>();
+  const [formRef] = Form.useForm();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setWrapClassnames([styles['login-modal']]);
-    return () => {
-      setWrapClassnames([styles['login-modal'], styles.active]);
-    };
+    setIsActive(true);
+    setWrapStyle(undefined);
+    return onClose;
   }, []);
 
+  const onClose = () => {
+    setIsActive(false);
+    setTimeout(() => {
+      setWrapStyle({
+        display: 'none',
+      });
+      console.log(authRoot);
+      authRoot?.unmount();
+    }, 100);
+  };
+
+  const onSubmit = async () => {
+    const values = formRef.getFieldsValue();
+    setLoading(true);
+    try {
+      const res = await signIn(values);
+      if (res.flag) {
+        message.success('登录成功');
+        await sleep(500);
+        localStorage.setItem(TOKEN_KEY, res.data);
+        onClose();
+        window.location.reload();
+      }
+    } catch {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className={wrapClassnames.join(' ')}>
+    <div
+      className={`${styles['login-modal']} ${!isActive && styles.active}`}
+      style={wrapStyle}
+    >
       <div className={styles.body}>
         <Button
           type="text"
@@ -33,7 +63,7 @@ const Login: FC<LoginProps> = ({ onClose }) => {
         <div className={styles.desc}>
           Hello World <br /> Let's Go
         </div>
-        <Form className={styles['flex-item']}>
+        <Form className={styles['flex-item']} form={formRef}>
           <Form.Item name="username">
             <Input placeholder="用户名" size="large" />
           </Form.Item>
@@ -42,7 +72,17 @@ const Login: FC<LoginProps> = ({ onClose }) => {
           </Form.Item>
         </Form>
         <div className={`${styles['flex-item']} ${styles['help-bar']}`}>
-          <Checkbox>记住密码</Checkbox>
+          <Checkbox
+            defaultChecked={!!localStorage.getItem(REMEBER_PASSWORD)}
+            onChange={(e) => {
+              localStorage.setItem(
+                REMEBER_PASSWORD,
+                e.target.checked ? 'checked' : ''
+              );
+            }}
+          >
+            记住密码
+          </Checkbox>
           <Button type="link" danger>
             忘记密码？
           </Button>
@@ -56,7 +96,9 @@ const Login: FC<LoginProps> = ({ onClose }) => {
             block
             type="primary"
             size="large"
+            onClick={onSubmit}
             className={styles['action-btn']}
+            loading={loading}
           >
             登录
           </Button>

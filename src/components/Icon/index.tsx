@@ -5,7 +5,7 @@ import { type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Icon = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_3006105_fbnyc96g2gf.js'
+  scriptUrl: '//at.alicdn.com/t/font_3006105_fbnyc96g2gf.js',
 });
 
 export default (props: IconFontProps) => {
@@ -18,12 +18,16 @@ interface LogoProps {
   notHref?: boolean;
 }
 
-export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal', notHref }) => {
+export const Logo: FC<LogoProps> = ({
+  showText = true,
+  logoSize = 'normal',
+  notHref,
+}) => {
   const navigate = useNavigate();
   const _size = {
     small: 24,
     normal: 36,
-    large: 48
+    large: 48,
   };
 
   const toHome = () => {
@@ -36,10 +40,16 @@ export const Logo: FC<LogoProps> = ({ showText = true, logoSize = 'normal', notH
   };
 
   return (
-    <Space align='center' onClick={toHome} style={{ cursor: 'pointer' }}>
-      <Icon type='icon-codepipelineCodePipeline'
-            style={{ fontSize: typeof logoSize === 'number' ? logoSize : _size[logoSize] }} />
-      {showText && <span style={{ fontWeight: 'bold', userSelect: 'none' }}>oneQiu</span>}
+    <Space align="center" onClick={toHome} style={{ cursor: 'pointer' }}>
+      <Icon
+        type="icon-codepipelineCodePipeline"
+        style={{
+          fontSize: typeof logoSize === 'number' ? logoSize : _size[logoSize],
+        }}
+      />
+      {showText && (
+        <span style={{ fontWeight: 'bold', userSelect: 'none' }}>oneQiu</span>
+      )}
     </Space>
   );
 };

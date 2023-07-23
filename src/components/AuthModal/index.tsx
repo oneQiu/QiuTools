@@ -1,4 +1,4 @@
-import { createRoot } from 'react-dom/client';
+import { Root, createRoot } from 'react-dom/client';
 import Login from './widgets/Login';
 import { useEffect } from 'react';
 
@@ -17,31 +17,22 @@ const AuthModal = () => {
     }
   };
 
-  return <Login onClose={AuthModal.close} />;
+  return <Login />;
 };
 
-const currStatus = {
-  flag: false,
-  type: 1,
-  root: null,
-};
+export let authRoot: Root | null = null;
 
-AuthModal.open = (type = 1) => {
-  if (currStatus.flag) return;
+AuthModal.open = () => {
   const authDiv = document.createElement('div');
   document.body.appendChild(authDiv);
   const root = createRoot(authDiv);
   root.render(<AuthModal />);
-  Object.assign(currStatus, {
-    type,
-    root,
-    flag: true,
-  });
+  authRoot = root;
 };
 
 AuthModal.close = () => {
-  (currStatus.root as any)?.unmount();
-  currStatus.flag = false;
+  authRoot?.unmount();
+  authRoot = null;
 };
 
 export default AuthModal;

@@ -2,81 +2,78 @@ import { Progress, Tag } from 'antd';
 import { ProList } from '@ant-design/pro-components';
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-interface AppDataItem {
-  title: string;
-  appId: string;
-  type: 'React' | 'Vue' | 'JavaScript';
-  href?: string;
-}
+import { getAppList } from '@/services/app';
 
 export default () => {
   const navigate = useNavigate();
 
-  const appData: AppDataItem[] = [
-    {
-      title: '可视化搭建平台',
-      appId: 'lowcode',
-      type: 'React'
+  const metas = {
+    title: {
+      dataIndex: 'appName',
     },
-    { title: '富文本编辑器', appId: 'tinymce', type: 'React' },
-    {
-      title: 'Qooi组件库',
-      appId: 'qooi',
-      type: 'React',
-      href: 'https://oneqiu.cn/qooi'
-    }
-  ];
-  const data = appData.map(({ title, appId, type, href }) => ({
-    title,
-    subTitle: <Tag color='#5BD8A6'>{type} 专栏</Tag>,
-    actions: [
-      <a
-        key='run'
-        onClick={() => {
-          if (href != null) {
-            window.open(href);
-          } else {
-            navigate(`/app/${appId}`);
-          }
-        }}
-      >
-        查看
-      </a>,
-      <a key='share'>分享</a>
-    ],
-    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/UCSiy1j6jx/xingzhuang.svg',
-    content: (
-      <div
-        style={{
-          flex: 1
-        }}
-      >
-        <div
-          style={{
-            width: 200
+    subTitle: {
+      dataIndex: 'tagIds',
+      render: (tagIds: any) => <Tag color="#5BD8A6">{tagIds} 专栏</Tag>,
+    },
+    actions: {
+      dataIndex: 'appUrl',
+      render: (href: string, { appId }: any) => [
+        <a
+          key="run"
+          onClick={() => {
+            if (href != null) {
+              window.open(href);
+            } else {
+              navigate(`/app/${appId}`);
+            }
           }}
         >
-          <div>开发中</div>
-          <Progress percent={80} />
-        </div>
-      </div>
-    )
-  }));
+          查看
+        </a>,
+        <a key="share">分享</a>,
+      ],
+    },
+    avatar: {
+      dataIndex: 'coverUrl',
+    },
+    content: {
+      dataIndex: 'status',
+      render: (status: number) => {
+        return (
+          <div
+            style={{
+              flex: 1,
+            }}
+          >
+            <div
+              style={{
+                width: 200,
+              }}
+            >
+              <div>开发中</div>
+              <Progress percent={80} />
+            </div>
+          </div>
+        );
+      },
+    },
+  };
+
   return (
     <Fragment>
-      <ProList<any>
+      <ProList
         grid={{ gutter: 16, column: 2 }}
-        metas={{
-          title: {},
-          subTitle: {},
-          type: {},
-          avatar: {},
-          content: {},
-          actions: {}
-        } as any}
+        metas={metas as any}
+        request={async () => {
+          const res = await getAppList();
+          console.log(res.data.list);
+          return {
+            data: res.data.list || [],
+            success: !res.data.flag,
+            total: res.data.total,
+          };
+        }}
         headerTitle={<span style={{ fontWeight: 'bold' }}></span>}
-        dataSource={data}
       />
     </Fragment>
   );

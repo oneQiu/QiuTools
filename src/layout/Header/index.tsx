@@ -35,6 +35,7 @@ export default () => {
               >
                 <Avatar
                   size={40}
+                  style={{ cursor: 'pointer' }}
                   onClick={() => {
                     AuthModal.open();
                   }}
