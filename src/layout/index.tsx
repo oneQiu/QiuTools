@@ -7,8 +7,8 @@ export default () => {
     <div className={styles['layout-warp']}>
       <Header />
       <div className={styles['layout-content']}>
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
   );
-}
+};

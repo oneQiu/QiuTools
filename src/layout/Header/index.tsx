@@ -4,10 +4,20 @@ import styles from '../index.module.less';
 import { MailOutlined } from '@ant-design/icons';
 import { Logo } from '@/components/Icon';
 import AuthModal from '@/components/AuthModal';
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from '@/stores';
+import { fetchUserInfo } from '@/stores/user';
 
 const { Header } = Layout;
 
 export default () => {
+  const { username, avatarUrl } = useAppSelector((state) => state.user);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUserInfo(10014));
+  }, []);
+
   return (
     <div className={styles['layout-header-placeholder']}>
       <Header className={styles['layout-header']}>
@@ -35,12 +45,13 @@ export default () => {
               >
                 <Avatar
                   size={40}
+                  src={avatarUrl}
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
                     AuthModal.open();
                   }}
                 >
-                  未登录
+                  {username || '未登录'}
                 </Avatar>
               </Dropdown>
             </div>
