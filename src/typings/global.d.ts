@@ -4,3 +4,5 @@ declare type ReqFunc<R = any, T = any> = (r?: R) => Promise<{
   message: string;
   flag: boolean;
 }>;
+
+declare type AnyObj<T = any> = { [key: string]: T };

@@ -23,6 +23,7 @@ const AuthModal = () => {
 export let authRoot: Root | null = null;
 
 AuthModal.open = () => {
+  if (authRoot) return;
   const authDiv = document.createElement('div');
   document.body.appendChild(authDiv);
   const root = createRoot(authDiv);

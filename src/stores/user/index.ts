@@ -25,6 +25,9 @@ const userSlice = createSlice({
     init(state, action: PayloadAction<Partial<typeof initialState>>) {
       return { ...state, ...action.payload };
     },
+    clearUserInfo() {
+      return { ...initialState };
+    },
   },
   extraReducers(builder) {
     return builder.addCase(fetchUserInfo.fulfilled, (state, action) => {

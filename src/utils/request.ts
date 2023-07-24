@@ -1,6 +1,6 @@
 import AuthModal from '@/components/AuthModal';
 import { TOKEN_KEY } from '@/constants/storageKey';
-import { message } from 'antd';
+import { notification } from 'antd';
 import Axios from 'axios';
 
 const request = Axios.create({
@@ -11,6 +11,15 @@ const request = Axios.create({
   },
 });
 
+const showMsg = (msg: string) => {
+  notification.error({
+    duration: 2,
+    key: 'requestErrMsg',
+    message: '提示',
+    description: msg,
+  });
+};
+
 request.interceptors.request.use((config) => {
   config.headers.Authorization = `Bearer ${localStorage.getItem(TOKEN_KEY)}`;
   return config;
@@ -19,16 +28,16 @@ request.interceptors.request.use((config) => {
 request.interceptors.response.use(
   (res) => {
     if (!res.data.flag) {
-      message.error(res.data.message || '接口繁忙');
+      showMsg(res.data.message || '接口繁忙');
     }
     return res.data;
   },
   (error) => {
     if (error.response?.status === 401) {
-      message.error('请登录');
+      showMsg('请登录');
       AuthModal.open();
     } else {
-      message.error('接口出了点小问题，请稍后重试');
+      showMsg('接口出了点小问题，请稍后重试');
     }
   }
 );

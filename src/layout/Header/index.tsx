@@ -6,7 +6,9 @@ import { Logo } from '@/components/Icon';
 import AuthModal from '@/components/AuthModal';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/stores';
-import { fetchUserInfo } from '@/stores/user';
+import userSlice, { fetchUserInfo } from '@/stores/user';
+import { TOKEN_KEY } from '@/constants/storageKey';
+import { getSearchParams } from '@/utils/toolkit';
 
 const { Header } = Layout;
 
@@ -15,8 +17,18 @@ export default () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(fetchUserInfo(10014));
+    const { code } = getSearchParams();
+    if (code) {
+      console.log('code');
+    } else {
+      dispatch(fetchUserInfo(10014));
+    }
   }, []);
+
+  const logOut = () => {
+    localStorage.removeItem(TOKEN_KEY);
+    dispatch(userSlice.actions.clearUserInfo());
+  };
 
   return (
     <div className={styles['layout-header-placeholder']}>
@@ -38,7 +50,7 @@ export default () => {
                       label: '系统设置',
                       key: 'setting',
                     },
-                    { label: '退出账号', key: 'logout' },
+                    { label: '退出账号', key: 'logout', onClick: logOut },
                   ],
                 }}
                 arrow
@@ -48,7 +60,9 @@ export default () => {
                   src={avatarUrl}
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
-                    AuthModal.open();
+                    if (!username) {
+                      AuthModal.open();
+                    }
                   }}
                 >
                   {username || '未登录'}

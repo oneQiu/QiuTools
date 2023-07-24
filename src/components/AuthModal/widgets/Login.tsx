@@ -2,8 +2,8 @@ import { Button, Checkbox, Form, Input, Space, message } from 'antd';
 import { CloseOutlined, GithubOutlined } from '@ant-design/icons';
 import styles from './index.module.less';
 import { useEffect, useState } from 'react';
-import { authRoot } from '..';
-import { signIn } from '@/services/user';
+import AuthModal from '..';
+import { getGitHubAuthUri, signIn } from '@/services/user';
 import { sleep } from '@/utils/toolkit';
 import { REMEBER_PASSWORD, TOKEN_KEY } from '@/constants/storageKey';
 
@@ -25,8 +25,7 @@ const Login = () => {
       setWrapStyle({
         display: 'none',
       });
-      console.log(authRoot);
-      authRoot?.unmount();
+      AuthModal.close();
     }, 100);
   };
 
@@ -44,6 +43,16 @@ const Login = () => {
       }
     } catch {
       setLoading(false);
+    }
+  };
+
+  const signInByGithub = async () => {
+    const res = await getGitHubAuthUri();
+    if (res.flag) {
+      console.log(res.flag, res.data);
+      //       const params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+      // width=0,height=0,left=-1000,top=-1000`;
+      window.open(res.data, '登录');
     }
   };
 
@@ -106,6 +115,7 @@ const Login = () => {
             block
             size="large"
             icon={<GithubOutlined />}
+            onClick={signInByGithub}
             className={styles['action-btn']}
           >
             使用 Github 登录
